@@ -1,0 +1,69 @@
+<template>
+  <div class="flex flex-col">
+    <div
+      class="bg-primary flex flex-row justify-between py-10 px-10 items-center"
+    >
+      <NuxtImg
+        @click="router.push('/')"
+        class="h-12"
+        src="svg/logo.svg"
+      ></NuxtImg>
+      <div class="flex flex-row">
+        <div class="font-medium text-lg gap-16 text-white flex flex-row">
+          <button @click="goTo('/Marcas')">MARCAS</button>
+          <button @click="goTo('/Productos')">PRODUCTOS</button>
+          <button @click="goTo('/Empresa')">EMPRESA</button>
+          <button @click="goTo('/Clientes')">ACCESO CLIENTES</button>
+        </div>
+        <div class="flex flex-row gap-3 border-l px-5 ml-5">
+          <NuxtImg src="/svg/ig.svg" class="text-white"></NuxtImg>
+          <NuxtImg src="/svg/fb.svg"></NuxtImg>
+          <NuxtImg src="/svg/li.svg"></NuxtImg>
+        </div>
+      </div>
+    </div>
+    <div
+      :style="{
+        backgroundImage: `url('/img/${banner}.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }"
+      class="flex justify-center"
+    >
+      <div
+        class="text-4xl py-24 flex flex-col text-white text-center"
+        v-if="route.path?.includes('Productos')"
+      >
+        <h2 class="font-medium text-lg">Línea de productos</h2>
+        <h1 class="font-extrabold text-4xl">
+          {{
+            route.path === "/Productos"
+              ? "Automotor"
+              : route.path.includes("Agricola")
+              ? "Agrícola"
+              : "Industrial"
+          }}
+        </h1>
+      </div>
+      <h1 v-else class="font-extrabold text-4xl py-24 flex text-white">
+        {{ banner }}
+      </h1>
+    </div>
+  </div>
+</template>
+
+<script setup>
+const router = useRouter();
+const route = useRoute();
+
+const banner = computed(() => {
+  const path = route.path.split("/").filter(Boolean).pop();
+  return path || "default";
+});
+
+const goTo = (ruta) => {
+  if (ruta === "/Clientes") {
+    window.open("https://catalogo.rodaservice.com.ar/", "_blank");
+  } else router.push(ruta);
+};
+</script>
