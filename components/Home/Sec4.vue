@@ -1,3 +1,66 @@
 <template>
-  <div class="flex flex-col">sec4</div>
+  <div
+    class="flex flex-col items-center"
+    style="
+      background: rgb(28, 38, 70);
+      background: linear-gradient(
+        90deg,
+        rgba(28, 38, 70, 1) 0%,
+        rgba(35, 50, 86, 1) 22%,
+        rgba(55, 82, 128, 1) 100%
+      );
+    "
+  >
+    <div
+      class="flex-col flex text-white max-w-[1440px] pt-40 pb-32 w-full gap-10"
+    >
+      <div class="flex flex-col gap-3 mb-12 w-3/5">
+        <h1 class="font-extrabold text-7xl">Más de 50 años</h1>
+        <h1 class="font-extrabold text-7xl">en el mercado</h1>
+        <p class="text-3xl">
+          Nuestro objetivo es brindar el mejor servicio, por eso contamos con
+          gran stock de las mejores marcas.
+        </p>
+      </div>
+
+      <VButton class="!text-primary" titulo="Conocé nuestra historia"></VButton>
+    </div>
+    <div
+      class="flex place-content-center pt-10 !text-primary w-full bg-no-repeat bg-cover bg-[url('/svg/Sec4BG.svg')]"
+    >
+      <div class="flex max-w-[1440px] w-full items-center justify-between">
+        <NuxtImg class="!w-1/2" src="svg/Sec4Laptop.svg"></NuxtImg>
+        <div class="flex flex-col gap-5 ">
+          <div class="flex flex-col">
+            <p class="text-5xl">Nuevo</p>
+            <p class="text-5xl">Catálogo Digital</p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-row gap-3 font-medium text-xl">
+              <NuxtImg src="svg/Sec4Check.svg"></NuxtImg>
+              <p>Rapidez en la consulta de stock</p>
+            </div>
+            <div class="flex flex-row gap-3 font-medium text-xl">
+              <NuxtImg src="svg/Sec4Check.svg"></NuxtImg>
+              <p>Precios y stock actualizados las 24 hs.</p>
+            </div>
+            <div class="flex flex-row gap-3 font-medium text-xl">
+              <NuxtImg src="svg/Sec4Check.svg"></NuxtImg>
+              <p>Pedidos por carrito</p>
+            </div>
+          </div>
+          <div class="flex flex-row gap-3">
+            <VButton
+              titulo="Acceso Clientes"
+              class="!bg-primary !text-white !text-xl"
+            ></VButton>
+            <VButton
+              titulo="Solicitar Manual de uso"
+              class="!bg-white !border-2 !border-primary !text-primary !text-xl"
+            ></VButton>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

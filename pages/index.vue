@@ -6,8 +6,4 @@
     <HomeSec4></HomeSec4>
   </div>
 </template>
-<script setup>
-definePageMeta({
-  layout: "home",
-});
-</script>
+<script setup></script>

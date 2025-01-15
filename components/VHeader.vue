@@ -1,15 +1,21 @@
 <template>
-  <div class="flex flex-col">
+  <div
+    class="flex flex-col bg-primary"
+    :class="isHome ? '!bg-transparent' : ''"
+  >
     <div
-      class="bg-primary flex flex-row justify-between py-10 px-10 items-center"
+      class="flex flex-row justify-between py-10 px-10 self-center w-full max-w-[1440px]"
     >
       <NuxtImg
         @click="router.push('/')"
-        class="h-12"
-        src="svg/logo.svg"
+        class="!h-12"
+        :src="isHome ? 'svg/logocolor.svg' : 'svg/logo.svg'"
       ></NuxtImg>
       <div class="flex flex-row">
-        <div class="font-medium text-lg gap-16 text-white flex flex-row">
+        <div
+          class="font-medium text-lg gap-16 text-white flex flex-row"
+          :class="isHome ? '!text-primary' : ''"
+        >
           <button @click="goTo('/Marcas')">MARCAS</button>
           <button @click="goTo('/Productos')">PRODUCTOS</button>
           <button @click="goTo('/Empresa')">EMPRESA</button>
@@ -23,6 +29,7 @@
       </div>
     </div>
     <div
+      v-if="!isHome"
       :style="{
         backgroundImage: `url('/img/${banner}.png')`,
         backgroundSize: 'cover',
@@ -55,6 +62,10 @@
 <script setup>
 const router = useRouter();
 const route = useRoute();
+
+const isHome = computed(() => {
+  return route.path === "/";
+});
 
 const banner = computed(() => {
   const path = route.path.split("/").filter(Boolean).pop();

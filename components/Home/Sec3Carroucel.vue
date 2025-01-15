@@ -1,8 +1,32 @@
 <template>
   <div ref="glideRef" class="glide">
+    <div
+      style="
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          270deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 47%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      "
+      class="absolute w-40 h-full right-0 z-10"
+    ></div>
+    <div
+      style="
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 47%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      "
+      class="absolute w-40 h-full left-0-0 z-10"
+    ></div>
     <div class="glide__arrows" data-glide-el="controls">
       <button
-        class="glide__arrow glide__arrow--left absolute z-10 h-14 w-14 bg-white flex items-center drop-shadow-2xl ml-8 justify-center rounded-2xl top-24"
+        class="glide__arrow glide__arrow--left absolute z-20 h-14 w-14 bg-white flex items-center drop-shadow-2xl ml-8 justify-center rounded-2xl top-24"
         data-glide-dir="<"
       >
         <svg
@@ -29,7 +53,7 @@
         </svg>
       </button>
       <button
-        class="glide__arrow glide__arrow--right absolute right-0 z-10 h-14 w-14 bg-white flex items-center drop-shadow-2xl mr-8 justify-center rounded-2xl top-24"
+        class="glide__arrow glide__arrow--right absolute right-0 z-20 h-14 w-14 bg-white flex items-center drop-shadow-2xl mr-8 justify-center rounded-2xl top-24"
         data-glide-dir=">"
       >
         <svg
@@ -60,35 +84,35 @@
       <ul class="glide__slides !py-11">
         <li class="glide__slide">
           <div
-            class="shadow-2xl !h-32 w-72 rounded-lg flex items-center justify-center"
+            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
           >
             <NuxtImg src="svg/Sec3_1.svg"></NuxtImg>
           </div>
         </li>
         <li class="glide__slide">
           <div
-            class="shadow-2xl !h-32 w-72 rounded-lg flex items-center justify-center"
+            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
           >
             <NuxtImg src="svg/Sec3_2.svg"></NuxtImg>
           </div>
         </li>
         <li class="glide__slide">
           <div
-            class="shadow-2xl !h-32 w-72 rounded-lg flex items-center justify-center"
+            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
           >
             <NuxtImg src="svg/Sec3_3.svg"></NuxtImg>
           </div>
         </li>
         <li class="glide__slide">
           <div
-            class="shadow-2xl !h-32 w-72 rounded-lg flex items-center justify-center"
+            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
           >
             <NuxtImg src="svg/Sec3_4.svg"></NuxtImg>
           </div>
         </li>
         <li class="glide__slide">
           <div
-            class="shadow-2xl !h-32 w-72 rounded-lg flex items-center justify-center"
+            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
           >
             <NuxtImg src="svg/Sec3_5.svg"></NuxtImg>
           </div>
@@ -107,7 +131,7 @@ const glideRef = ref(null);
 onMounted(() => {
   const glideInstance = new Glide(glideRef.value, {
     type: "carousel",
-    perView: 5,
+    perView: 4,
     gap: 20,
   });
   glideInstance.mount();

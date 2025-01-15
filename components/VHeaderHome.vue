@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col items-center">
     <div
-      class="text-primary flex flex-row justify-between py-10 px-10 items-center"
+      class="text-primary flex flex-row py-10 justify-between w-full max-w-[1440px]"
     >
       <NuxtImg
         @click="router.push('/')"
@@ -9,14 +9,14 @@
         src="svg/logocolor.svg"
       ></NuxtImg>
       <div class="flex flex-row">
-        <div class="font-medium text-lg gap-16 flex flex-row">
+        <div class="font-medium text-lg flex flex-row gap-3">
           <button @click="goTo('/Marcas')">MARCAS</button>
           <button @click="goTo('/Productos')">PRODUCTOS</button>
           <button @click="goTo('/Empresa')">EMPRESA</button>
           <button @click="goTo('/Clientes')">ACCESO CLIENTES</button>
         </div>
-        <div class="flex flex-row gap-3 border-l border-primary px-5 ml-5">
-          <NuxtImg class="!text-primary" src="/svg/ig2.svg"></NuxtImg>
+        <div class="flex flex-row border-l border-primary">
+          <NuxtImg src="/svg/ig2.svg"></NuxtImg>
           <NuxtImg src="/svg/fb2.svg"></NuxtImg>
           <NuxtImg src="/svg/li2.svg"></NuxtImg>
         </div>
