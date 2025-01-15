@@ -1,14 +1,11 @@
 <template>
-  <div class="flex flex-row">
-    <div class="flex flex-col gap-1 w-2/5">
-      <div class="bg-tertiary py-2 pl-7">opcion 1</div>
-      <div class="bg-tertiary py-2 pl-7">opcion 1</div>
-      <div class="bg-tertiary py-2 pl-7">opcion 1</div>
-      <div class="bg-tertiary py-2 pl-7">opcion 1</div>
-      <div class="bg-tertiary py-2 pl-7">opcion 1</div>
-      <div class="bg-tertiary py-2 pl-7">opcion 1</div>
+  <div class="flex flex-row border">
+    <div class="flex flex-col gap-1 w-2/5 overflow-scroll border">
+      <div class="bg-tertiary pl-12 text-xl py-5" v-for="dato in data">
+        {{ dato.marca }}
+      </div>
     </div>
-    <div class="bg-tertiary flex justify-center items-center py-28 px-60">
+    <div class="bg-tertiary flex justify-center items-center p-10">
       <div class="flex relative">
         <div class="flex flex-col relative justify-center">
           <div class="absolute h-full w-full">
@@ -69,4 +66,82 @@
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+const data = [
+  {
+    marca: "JBL",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "ADD",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "ABE",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "FEEQRE",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "LALOLO",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "JBL",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "122 ASD",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "EQWW",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "AAAWER",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "QQE",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "EREESSA",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "YPF",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "GGGE1",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "11123AAA",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+  {
+    marca: "ASWWQQWE",
+    texto:
+      "NTN en una de las tres marcas lideres a nivel mundial en la fabricación de rodamientos para el automotor, el agro y la industria. Cuenta con más de 68 plantas en todo el mundo y casi 100 años de experiencia brindando primera calidad que respaldan su nombre. Roda Service importa directo de fábrica toda su línea de productos, ofreciendo así un amplio stock, desde la ciudad de Rosario hacia todo el país.",
+  },
+];
+</script>
