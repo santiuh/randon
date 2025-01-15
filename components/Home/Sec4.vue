@@ -27,10 +27,11 @@
     </div>
     <div
       class="flex place-content-center pt-10 !text-primary w-full bg-no-repeat bg-cover bg-[url('/svg/Sec4BG.svg')]"
+      data-aos="slide-up"
     >
       <div class="flex max-w-[1440px] w-full items-center justify-between">
         <NuxtImg class="!w-1/2" src="svg/Sec4Laptop.svg"></NuxtImg>
-        <div class="flex flex-col gap-5 ">
+        <div class="flex flex-col gap-5">
           <div class="flex flex-col">
             <p class="text-5xl">Nuevo</p>
             <p class="text-5xl">Catálogo Digital</p>

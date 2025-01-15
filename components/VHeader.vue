@@ -41,8 +41,7 @@
         class="text-4xl py-24 flex flex-col text-white text-center"
         v-if="route.path?.includes('Productos')"
       >
-        <h2 class="font-medium text-lg">Línea de productos</h2>
-        <h1 class="font-extrabold text-4xl">
+        <h1 class="font-extrabold text-4xl relative">
           {{
             route.path === "/Productos"
               ? "Automotor"
@@ -50,6 +49,9 @@
               ? "Agrícola"
               : "Industrial"
           }}
+          <p class="font-medium text-lg absolute bottom-9 w-full">
+            Línea de productos
+          </p>
         </h1>
       </div>
       <h1 v-else class="font-extrabold text-4xl py-24 flex text-white">
