@@ -1,20 +1,28 @@
 <template>
   <div
-    class="flex flex-col bg-primary"
-    :class="isHome ? '!bg-transparent' : ''"
+    class="flex flex-col"
+    :class="{
+      ' !bg-primary ': isScrolled && isHome, 
+      ' fixed z-50 w-full bg-transparent ': isHome,  
+      ' bg-primary ': !isHome
+    }"
+    :style="{
+      transition: 'background-color 0.3s ease-in-out'
+    }"
   >
     <div
       class="flex flex-row justify-between py-10 px-10 self-center w-full max-w-[1440px]"
     >
       <NuxtImg
         @click="router.push('/')"
-        class="!h-12"
-        :src="isHome ? 'svg/logocolor.svg' : 'svg/logo.svg'"
+        class="transition-all duration-300 hover:cursor-pointer"
+        :class="!isHome? '!h-12' : isScrolled && isHome ? '!h-10' : '!h-12'"
+        :src="!isHome? 'svg/logo.svg' : isScrolled && isHome ? 'svg/logo.svg' : 'svg/logocolor.svg'"  
       ></NuxtImg>
       <div class="flex flex-row">
         <div
-          class="font-medium text-lg gap-16 text-white flex flex-row"
-          :class="isHome ? '!text-primary' : ''"
+          class="font-medium text-lg gap-16 flex flex-row"
+          :class="!isHome? 'text-white'  : isScrolled && isHome ? 'text-white' : 'text-primary'" 
         >
           <button @click="goTo('/Marcas')">MARCAS</button>
           <button @click="goTo('/Productos')">PRODUCTOS</button>
@@ -22,7 +30,7 @@
           <button @click="goTo('/Clientes')">ACCESO CLIENTES</button>
         </div>
         <div class="flex flex-row gap-3 border-l px-5 ml-5">
-          <NuxtImg src="/svg/ig.svg" class="text-white"></NuxtImg>
+          <NuxtImg src="/svg/ig.svg" ></NuxtImg>
           <NuxtImg src="/svg/fb.svg"></NuxtImg>
           <NuxtImg src="/svg/li.svg"></NuxtImg>
         </div>
@@ -62,6 +70,8 @@
 </template>
 
 <script setup>
+import { ref, computed, onMounted } from 'vue';
+
 const router = useRouter();
 const route = useRoute();
 
@@ -72,6 +82,25 @@ const isHome = computed(() => {
 const banner = computed(() => {
   const path = route.path.split("/").filter(Boolean).pop();
   return path || "default";
+});
+
+// Estado para controlar el fondo cuando se hace scroll
+const isScrolled = ref(false);
+
+// Función que maneja el evento de scroll
+const handleScroll = () => {
+  if (window.scrollY > 100) {  // Cambiar '100' por la distancia que prefieras
+    isScrolled.value = true;
+  } else {
+    isScrolled.value = false;
+  }
+};
+
+// Agregar listener para el evento de scroll
+onMounted(() => {
+  if (isHome.value) {
+    window.addEventListener('scroll', handleScroll);
+  }
 });
 
 const goTo = (ruta) => {

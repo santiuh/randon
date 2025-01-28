@@ -12,7 +12,7 @@
     "
   >
     <div
-      class="flex-col flex text-white max-w-[1440px] pt-40 pb-32 w-full gap-10"
+      class="flex-col flex text-white max-w-[1440px] px-10 pt-40 pb-32 w-full gap-10"
     >
       <div class="flex flex-col gap-3 mb-12 w-3/5">
         <h1 class="font-extrabold text-7xl">Más de 50 años</h1>
@@ -26,10 +26,10 @@
       <VButton class="!text-primary" titulo="Conocé nuestra historia"></VButton>
     </div>
     <div
-      class="flex place-content-center pt-10 !text-primary w-full bg-no-repeat bg-cover bg-[url('/svg/Sec4BG.svg')]"
+      class="flex place-content-center pt-10 pb-28 !text-primary w-full bg-no-repeat bg-cover bg-[url('/svg/Sec4BG.svg')]"
       data-aos="slide-up"
     >
-      <div class="flex max-w-[1440px] w-full items-center justify-between">
+      <div class="flex max-w-[1440px] px-10 w-full items-center justify-between">
         <NuxtImg class="!w-1/2" src="svg/Sec4Laptop.svg"></NuxtImg>
         <div class="flex flex-col gap-5">
           <div class="flex flex-col">
