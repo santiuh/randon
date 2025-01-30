@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-col">
     <div class="flex place-content-center bg-tertiary">
-      <div class="flex flex-row justify-around py-16 max-w-[1440px] w-full">
-        <div class="flex flex-col gap-2 text-[#1C2646]">
-          <button @click="router.push('/Productos')" class="font-bold text-3xl">
+      <div class="flex flex-row justify-around py-8 max-w-[1440px] w-full">
+        <div class="flex flex-col gap-1 text-[#1C2646]">
+          <button @click="router.push('/Productos')" class="font-bold text-xl">
             Linea Automotor
           </button>
           <hr
@@ -11,10 +11,10 @@
             class="w-32 rounded-full border-secondary self-center border-2"
           />
         </div>
-        <div class="flex flex-col gap-2 text-[#1C2646]">
+        <div class="flex flex-col gap-1 text-[#1C2646]">
           <button
             @click="router.push('/Productos/Agricola')"
-            class="font-bold text-3xl"
+            class="font-bold text-xl"
           >
             Linea Implementos agricolas
           </button>
@@ -23,10 +23,10 @@
             class="w-32 rounded-full border-secondary self-center border-2"
           />
         </div>
-        <div class="flex flex-col gap-2 text-[#1C2646]">
+        <div class="flex flex-col gap-1 text-[#1C2646]">
           <button
             @click="router.push('/Productos/Industrial')"
-            class="font-bold text-3xl"
+            class="font-bold text-xl"
           >
             Linea Industrial
           </button>
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <NuxtPage class="max-w-[1440px] w-full self-center"></NuxtPage>
+    <NuxtPage class="max-w-[1440px] px-32 self-center"></NuxtPage>
   </div>
 </template>
 <script setup>

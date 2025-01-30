@@ -9,16 +9,20 @@
       :class="par ? 'self-start' : 'self-end text-end'"
     >
       <div
-        class="border-b-primary relative border-b font-extrabold text-4xl px-11 pb-3"
+        class="border-b-primary relative border-b font-extrabold text-3xl px-11 pb-3 shadow-xl"
       >
         {{ datos.year }}
         <span
           :class="par ? '-bottom-4 -left-4' : '-right-4 -bottom-4'"
           class="absolute rounded-full z-10 h-8 w-8 bg-sky-500"
         ></span>
+        <span
+          v-if="id === 0"
+          class="absolute rounded-full z-10 h-8 w-8 bg-sky-500 -bottom-4 -left-4 animate-ping"
+        ></span>
       </div>
       <div
-        class="text-4xl px-11 z-0"
+        class="text-2xl px-11 z-0"
         :data-aos="par ? 'slide-left' : 'slide-right'"
       >
         {{ datos.info }}
@@ -26,7 +30,7 @@
     </div>
     <div
       style="position-area: center"
-      class="absolute h-full border-8 bg-primary border-primary flex"
+      class="absolute h-full border-8 bg-primary border-primary flex shadow-2xl"
       :class="id === 0 ? 'rounded-t-full' : ''"
     ></div>
   </div>

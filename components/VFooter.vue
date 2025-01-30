@@ -1,5 +1,5 @@
 <template>
-  <div class="flex bg-primary place-content-center pt-24 pb-32">
+  <div class="flex bg-primary place-content-center pt-24 pb-32 z-40">
     <div class="flex-row flex text-white justify-around w-full max-w-[1440px]">
       <NuxtImg class="!h-14 self-center" src="/svg/logo.svg"></NuxtImg>
       <div class="flex flex-col gap-6">
@@ -29,9 +29,9 @@
       <div class="flex flex-col gap-6">
         <div class="font-bold text-2xl flex">Redes Sociales</div>
         <div class="flex flex-row gap-3">
-          <NuxtImg class="!h-5 !w-5" src="/svg/ig.svg"></NuxtImg>
-          <NuxtImg class="!h-5 !w-5" src="/svg/fb.svg"></NuxtImg>
-          <NuxtImg class="!h-5 !w-5" src="/svg/li.svg"></NuxtImg>
+          <svgo-ig class="!h-7 !w-7"></svgo-ig>
+          <svgo-fb class="!h-7 !w-7"></svgo-fb>
+          <svgo-li class="!h-7 !w-7"></svgo-li>
         </div>
       </div>
     </div>

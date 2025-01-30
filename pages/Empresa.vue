@@ -1,7 +1,16 @@
 <template>
   <div class="flex place-content-center">
     <div
-      class="flex flex-col max-w-[1440px] justify-center w-4/6 pt-32 pb-48 overflow-hidden"
+      class="flex flex-col max-w-[1440px] justify-center w-4/6 pt-16 pb-48 overflow-hidden"
+      style="
+        background: rgb(51, 51, 51);
+        background: linear-gradient(
+          90deg,
+          rgba(51, 51, 51, 0) 30%,
+          rgba(0, 0, 0, 0.1292892156862745) 50%,
+          rgba(0, 0, 0, 0) 70%
+        );
+      "
     >
       <EmpresaTimeline
         v-for="(dato, i) in data"

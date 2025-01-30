@@ -12,40 +12,71 @@
     "
   >
     <div
-      class="flex-col flex text-white max-w-[1440px] px-10 pt-40 pb-32 w-full gap-10"
+      class="flex-row flex text-white max-w-[1440px] px-10 pt-40 pb-32 w-full"
     >
-      <div class="flex flex-col gap-3 mb-12 w-3/5">
-        <h1 class="font-extrabold text-7xl">Más de 50 años</h1>
-        <h1 class="font-extrabold text-7xl">en el mercado</h1>
-        <p class="text-3xl">
-          Nuestro objetivo es brindar el mejor servicio, por eso contamos con
-          gran stock de las mejores marcas.
-        </p>
+      <div class="flex flex-col w-4/5">
+        <div class="flex flex-col gap-3 mb-12 w-3/5">
+          <h1 class="font-extrabold text-7xl text-nowrap">Más de 50 años</h1>
+          <h1 class="font-extrabold text-7xl text-nowrap">en el mercado</h1>
+          <p class="text-3xl">
+            Nuestro objetivo es brindar el mejor servicio, por eso contamos con
+            gran stock de las mejores marcas.
+          </p>
+        </div>
+
+        <VButton
+          class="!text-primary"
+          titulo="Conocé nuestra historia"
+        ></VButton>
+      </div>
+      <!-- arranca acá -->
+
+      <div data-aos="slide-up" class="flex flex-col z-20 w-2/5 relative">
+        <div
+          class="border-b-white relative border-b font-extrabold text-4xl px-11 pb-3"
+        >
+          {{ datos.year }}
+          <span
+            class="absolute rounded-full z-10 h-8 w-8 bg-sky-500 -bottom-4 -left-3 animate-ping"
+          ></span>
+          <span
+            class="absolute rounded-full z-10 h-8 w-8 bg-sky-500 -bottom-4 -left-3"
+          ></span>
+        </div>
+        <div class="text-4xl px-11 z-0 slide-left border-l-8 pt-5">
+          {{ datos.info }}
+        </div>
+        <div
+          style="height: 250%"
+          class="absolute top-10 h-full bg-primary border-l-8 flex"
+        ></div>
       </div>
 
-      <VButton class="!text-primary" titulo="Conocé nuestra historia"></VButton>
+      <!-- termina acá -->
     </div>
     <div
-      class="flex place-content-center pt-10 pb-28 !text-primary w-full bg-no-repeat bg-cover bg-[url('/svg/Sec4BG.svg')]"
+      class="flex place-content-center pt-10 pb-28 w-full z-20 bg-no-repeat bg-cover bg-[url('/svg/Sec4BG.svg')]"
       data-aos="slide-up"
     >
-      <div class="flex max-w-[1440px] px-10 w-full items-center justify-between">
+      <div
+        class="flex max-w-[1440px] px-10 w-full items-center justify-between"
+      >
         <NuxtImg class="!w-1/2" src="svg/Sec4Laptop.svg"></NuxtImg>
         <div class="flex flex-col gap-5">
           <div class="flex flex-col">
-            <p class="text-5xl">Nuevo</p>
-            <p class="text-5xl">Catálogo Digital</p>
+            <p class="text-4xl">Nuevo</p>
+            <p class="text-4xl font-semibold">Catálogo Digital</p>
           </div>
           <div class="flex flex-col gap-2">
-            <div class="flex flex-row gap-3 font-medium text-xl">
+            <div class="flex flex-row gap-3 font-medium text-lg">
               <NuxtImg src="svg/Sec4Check.svg"></NuxtImg>
               <p>Rapidez en la consulta de stock</p>
             </div>
-            <div class="flex flex-row gap-3 font-medium text-xl">
+            <div class="flex flex-row gap-3 font-medium text-lg">
               <NuxtImg src="svg/Sec4Check.svg"></NuxtImg>
               <p>Precios y stock actualizados las 24 hs.</p>
             </div>
-            <div class="flex flex-row gap-3 font-medium text-xl">
+            <div class="flex flex-row gap-3 font-medium text-lg">
               <NuxtImg src="svg/Sec4Check.svg"></NuxtImg>
               <p>Pedidos por carrito</p>
             </div>
@@ -57,7 +88,7 @@
             ></VButton>
             <VButton
               titulo="Solicitar Manual de uso"
-              class="!bg-white !border-2 !border-primary !text-primary !text-xl"
+              class="!bg-white !border-2 !border-primary !text-xl"
             ></VButton>
           </div>
         </div>
@@ -65,3 +96,9 @@
     </div>
   </div>
 </template>
+<script setup>
+const datos = ref({
+  year: "1960",
+  info: "Jacinto Amatriain realiza la primer importación de rodamientos desde Inglaterra.",
+});
+</script>

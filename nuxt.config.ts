@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxt/image",
+    "nuxt-svgo",
     [
       "@nuxtjs/google-fonts",
       {
@@ -25,4 +26,7 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  svgo: {
+    autoImportPath: "./public/svg",
+  },
 });

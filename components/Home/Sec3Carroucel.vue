@@ -83,39 +83,44 @@
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides !py-11">
         <li class="glide__slide">
-          <div
-            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
-          >
-            <NuxtImg src="svg/Sec3_1.svg"></NuxtImg>
-          </div>
+          <svgo-Sec3_1
+            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_1>
         </li>
         <li class="glide__slide">
-          <div
-            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
-          >
-            <NuxtImg src="svg/Sec3_2.svg"></NuxtImg>
-          </div>
+          <svgo-Sec3_2
+            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_2>
         </li>
         <li class="glide__slide">
-          <div
-            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
-          >
-            <NuxtImg src="svg/Sec3_3.svg"></NuxtImg>
-          </div>
+          <svgo-Sec3_3
+            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_3>
         </li>
         <li class="glide__slide">
-          <div
-            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
-          >
-            <NuxtImg src="svg/Sec3_4.svg"></NuxtImg>
-          </div>
+          <svgo-Sec3_4
+            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_4>
         </li>
         <li class="glide__slide">
-          <div
-            class="shadow-lg !h-32 w-72 rounded-lg flex items-center justify-center"
-          >
-            <NuxtImg src="svg/Sec3_5.svg"></NuxtImg>
-          </div>
+          <svgo-Sec3_5
+            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_5>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_3
+            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_3>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_2
+            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_2>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_4
+            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_4>
         </li>
       </ul>
     </div>
@@ -125,13 +130,13 @@
 <script setup>
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
-
+const data = ref([""]);
 const glideRef = ref(null);
 
 onMounted(() => {
   const glideInstance = new Glide(glideRef.value, {
     type: "carousel",
-    perView: 4,
+    perView: 5,
     gap: 20,
   });
   glideInstance.mount();
