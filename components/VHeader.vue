@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col"
+    class="hidden lg:flex flex-col"
     :class="{
       ' !bg-primary ': isScrolled && isHome,
       ' fixed z-50 w-full bg-transparent ': isHome,

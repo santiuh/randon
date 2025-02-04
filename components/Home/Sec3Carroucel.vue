@@ -26,7 +26,7 @@
     ></div>
     <div class="glide__arrows" data-glide-el="controls">
       <button
-        class="glide__arrow glide__arrow--left absolute z-20 h-14 w-14 bg-white flex items-center drop-shadow-2xl ml-8 justify-center rounded-2xl top-24"
+        class="glide__arrow glide__arrow--left !absolute !z-20 !h-14 !w-14 !bg-white !flex !items-center !drop-shadow-2xl !ml-8 !justify-center !rounded-2xl !top-28"
         data-glide-dir="<"
       >
         <svg
@@ -53,7 +53,7 @@
         </svg>
       </button>
       <button
-        class="glide__arrow glide__arrow--right absolute right-0 z-20 h-14 w-14 bg-white flex items-center drop-shadow-2xl mr-8 justify-center rounded-2xl top-24"
+        class="glide__arrow glide__arrow--right !absolute !z-20 !h-14 !w-14 !bg-white !flex !items-center !drop-shadow-2xl !ml-8 !justify-center !rounded-2xl !top-28 right-0 mr-8"
         data-glide-dir=">"
       >
         <svg
@@ -137,6 +137,10 @@ onMounted(() => {
   const glideInstance = new Glide(glideRef.value, {
     type: "carousel",
     perView: 5,
+    breakpoints: {
+      1024: { perView: 3 },
+      600: { perView: 1 },
+    },
     gap: 20,
   });
   glideInstance.mount();

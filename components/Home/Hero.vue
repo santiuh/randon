@@ -56,7 +56,8 @@ onMounted(() => {
   const glideInstance = new Glide(glideRef2.value, {
     type: "carousel",
     perView: 1,
-    autoplay: 3000,
+    autoplay: 4000,
+    hoverpause: false,
   });
   glideInstance.mount();
 });
