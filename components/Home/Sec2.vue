@@ -7,7 +7,7 @@
       <hr
         class="w-32 rounded-full border-secondary self-center border-2 my-14"
       />
-      <div class="flex flex-row justify-center gap-10">
+      <div class="flex flex-col lg:flex-row justify-center gap-10">
         <Sec2Card
           @click="router.push('/Productos')"
           bg="img/Sec2Card1.png"

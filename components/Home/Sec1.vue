@@ -1,6 +1,6 @@
 <template>
   <div class="flex place-content-center">
-    <div class="flex flex-row py-16 justify-center max-w-[1440px] gap-12">
+    <div class="flex flex-col lg:flex-row py-16 justify-center max-w-[1440px] gap-12">
       <div
         class="flex flex-col lg:text-2xl font-medium text-center items-center"
       >

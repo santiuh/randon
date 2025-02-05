@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col pt-44 max-w-[1440px] self-center">
+  <div
+    class="flex flex-col pt-44 w-screen  lg:max-w-[1440px] self-center"
+  >
     <h1 class="font-extrabold text-5xl text-[#1C2646] text-center">
       Trabajamos con las mejores marcas
     </h1>

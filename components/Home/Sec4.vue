@@ -58,7 +58,7 @@
       class="flex place-content-center pt-10 pb-28 w-full z-20 bg-no-repeat bg-cover bg-[url('/svg/Sec4BG.svg')]"
     >
       <div
-        class="flex max-w-[1440px] px-10 w-full items-center justify-between"
+        class="flex max-w-[1440px] px-10 py-10 w-full items-center justify-between"
       >
         <NuxtImg class="!w-1/2" src="svg/Sec4Laptop.svg"></NuxtImg>
         <div class="flex flex-col gap-5">

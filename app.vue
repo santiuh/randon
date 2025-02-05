@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout class="font-raleway">
-    <NuxtPage class="overflow-x-hidden" />
+    <NuxtPage class="" />
   </NuxtLayout>
 </template>
 <style>

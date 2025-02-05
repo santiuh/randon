@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[657px] w-full px-9 bg-cover rounded-3xl pb-16 gap-9 flex flex-col justify-end hover:shadow-xl shadow-2xl hover:cursor-pointer hover:scale-105 duration-300 transition-all"
+    class="lg:h-[657px] w-full px-3 lg:px-9 bg-cover rounded-3xl lg:py-0 py-4 lg:pb-16 gap-9 flex flex-col justify-end hover:shadow-xl shadow-2xl hover:cursor-pointer hover:scale-105 duration-300 transition-all"
     :style="{ backgroundImage: `url(${bg})` }"
   >
     <div class="flex flex-col text-white">

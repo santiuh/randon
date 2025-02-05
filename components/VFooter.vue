@@ -1,8 +1,10 @@
 <template>
   <div class="flex bg-primary place-content-center pt-24 pb-32 z-40">
-    <div class="flex-row flex text-white justify-around w-full max-w-[1440px]">
+    <div
+      class="flex-col lg:flex-row gap-6 lg:gap-0 items-center lg:items-start text-center lg:text-start flex text-white lg:justify-around w-full max-w-[1440px]"
+    >
       <NuxtImg class="!h-14 self-center" src="/svg/logo.svg"></NuxtImg>
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-3 lg:gap-6">
         <div class="font-bold text-2xl">Contactanos</div>
         <div class="flex flex-row text-lg gap-6 items-center">
           <NuxtImg class="h-5" src="svg/footergps.svg"></NuxtImg>
@@ -11,7 +13,7 @@
             <span>Prov. de Santa Fé - Argentina </span>
           </div>
         </div>
-        <div class="flex flex-row text-lg gap-3 items-center">
+        <div class="flex flex-col lg:flex-row text-lg gap-3 items-center">
           <div class="flex flex-row gap-3 items-center">
             <NuxtImg class="h-5" src="svg/footerwsp.svg"></NuxtImg>
             <span>+54 9 341 5709283</span>
@@ -26,7 +28,7 @@
           <span>rosario@rodaservice.com.ar</span>
         </div>
       </div>
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-3 lg:gap-6 items-center lg:items-start">
         <div class="font-bold text-2xl flex">Redes Sociales</div>
         <div class="flex flex-row gap-3">
           <svgo-ig class="!h-7 !w-7"></svgo-ig>

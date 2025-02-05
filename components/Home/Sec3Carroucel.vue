@@ -138,8 +138,9 @@ onMounted(() => {
     type: "carousel",
     perView: 5,
     breakpoints: {
-      1024: { perView: 3 },
-      600: { perView: 1 },
+      1280: {
+        perView: 1,
+      },
     },
     gap: 20,
   });
