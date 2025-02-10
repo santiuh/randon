@@ -12,7 +12,7 @@
 
       <VButton
         titulo="Conocé nuestra historia"
-        class="!text-xl !bg-white"
+        class="!text-xl !bg-white w-3/4"
         @click="router.push('/Empresa')"
       ></VButton>
     </div>

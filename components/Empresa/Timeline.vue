@@ -9,7 +9,7 @@
       :class="par ? 'self-start' : 'self-end text-end'"
     >
       <div
-        class="border-b-primary relative border-b font-extrabold text-3xl px-11 pb-3 shadow-xl"
+        class="border-b-primary relative border-b font-extrabold text-3xl px-5 lg:px-11 pb-3 shadow-xl"
       >
         {{ datos.year }}
         <span
@@ -22,7 +22,7 @@
         ></span>
       </div>
       <div
-        class="text-2xl px-11 z-0"
+        class="text-xl lg:text-2xl lg:px-11 px-5 z-0"
         :data-aos="par ? 'slide-left' : 'slide-right'"
       >
         {{ datos.info }}

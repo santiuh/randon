@@ -1,7 +1,7 @@
 <template>
   <div class="flex place-content-center">
     <div
-      class="flex flex-col max-w-[1440px] justify-center w-4/6 pt-16 pb-48 overflow-hidden"
+      class="flex flex-col max-w-[1440px] justify-center w-5/6 lg:w-4/6 pt-16 pb-48 overflow-hidden"
       style="
         background: rgb(51, 51, 51);
         background: linear-gradient(

@@ -12,26 +12,33 @@
     "
   >
     <div
-      class="flex-row flex text-white max-w-[1440px] px-10 pt-40 pb-32 w-full"
+      class="flex-col lg:flex-row flex text-white max-w-[1440px] px-10 pt-40 pb-4 lg:pb-32 w-full"
     >
-      <div class="flex flex-col w-4/5">
-        <div class="flex flex-col gap-3 mb-12 w-3/5">
-          <h1 class="font-extrabold text-7xl text-nowrap">Más de 50 años</h1>
-          <h1 class="font-extrabold text-7xl text-nowrap">en el mercado</h1>
-          <p class="text-3xl">
+      <div class="flex flex-col lg:w-4/5">
+        <div class="flex flex-col gap-3 mb-12 lg:w-3/5">
+          <h1 class="font-extrabold text-4xl lg:text-7xl text-nowrap">
+            Más de 50 años
+          </h1>
+          <h1 class="font-extrabold text-4xl lg:text-7xl text-nowrap">
+            en el mercado
+          </h1>
+          <p class="text-xl lg:text-3xl">
             Nuestro objetivo es brindar el mejor servicio, por eso contamos con
             gran stock de las mejores marcas.
           </p>
         </div>
 
         <VButton
-          class="!text-primary"
-          titulo="Conocé nuestra historia"
+          class="!text-primary w-full lg:w-fit"
+          titulo="Conocé nuestra&nbsp;historia"
         ></VButton>
       </div>
       <!-- arranca acá -->
 
-      <div data-aos="slide-up" class="flex flex-col z-20 w-2/5 relative">
+      <div
+        data-aos="slide-up"
+        class="flex flex-col z-20 lg:w-2/5 relative mt-10 lg:mt-0"
+      >
         <div
           class="border-b-white relative border-b font-extrabold text-4xl px-11 pb-3"
         >
@@ -43,7 +50,7 @@
             class="absolute rounded-full z-10 h-8 w-8 bg-sky-500 -bottom-4 -left-3"
           ></span>
         </div>
-        <div class="text-4xl px-11 z-0 slide-left border-l-8 pt-5">
+        <div class="text-xl lg:text-4xl px-11 z-0 slide-left border-l-8 pt-5">
           {{ datos.info }}
         </div>
         <div
@@ -55,12 +62,12 @@
       <!-- termina acá -->
     </div>
     <div
-      class="flex place-content-center pt-10 pb-28 w-full z-20 bg-no-repeat bg-cover bg-[url('/svg/Sec4BG.svg')]"
+      class="flex flex-col lg:flex-row place-content-center lg:pt-10 pb-28 w-full z-20 bg-no-repeat bg-cover bg-[url('/svg/Sec4BG.svg')]"
     >
       <div
-        class="flex max-w-[1440px] px-10 py-10 w-full items-center justify-between"
+        class="flex flex-col lg:flex-row max-w-[1440px] px-10 py-10 w-full items-center justify-between"
       >
-        <NuxtImg class="!w-1/2" src="svg/Sec4Laptop.svg"></NuxtImg>
+        <NuxtImg class="lg:!w-1/2" src="svg/Sec4Laptop.svg"></NuxtImg>
         <div class="flex flex-col gap-5">
           <div class="flex flex-col">
             <p class="text-4xl">Nuevo</p>
@@ -80,7 +87,7 @@
               <p>Pedidos por carrito</p>
             </div>
           </div>
-          <div class="flex flex-row gap-3">
+          <div class="hidden lg:flex flex-row gap-3">
             <VButton
               titulo="Acceso Clientes"
               class="!bg-primary !text-white !text-xl"
@@ -91,6 +98,16 @@
             ></VButton>
           </div>
         </div>
+      </div>
+      <div class="flex lg:hidden flex-col lg:flex-row gap-3 items-center">
+        <VButton
+          titulo="Acceso Clientes"
+          class="!bg-primary !text-white !w-2/3 !justify-center"
+        ></VButton>
+        <VButton
+          titulo="Solicitar Manual&nbsp;de&nbsp;uso"
+          class="!bg-white !border-2 !border-primary !w-2/3 !justify-center"
+        ></VButton>
       </div>
     </div>
   </div>

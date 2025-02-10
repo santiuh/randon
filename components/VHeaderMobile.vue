@@ -3,15 +3,20 @@
     class="w-full flex justify-center xl:pt-[52px] xl:pb-[32px] text-white"
     :class="route.path === '/contacto' ? 'absolute' : 'bg-primary'"
   >
-    <nav class="flex flex-col w-full bg-primary xl:hidden fixed z-50">
+    <nav
+      class="flex flex-col w-full xl:hidden fixed z-50 transition-all duration-300"
+      :class="{
+        '!bg-primary': menu,
+        ' !bg-primary ': isScrolled && isHome,
+        ' fixed z-50 w-full bg-transparent ': isHome,
+        ' bg-primary ': !isHome,
+      }"
+    >
       <div class="w-full flex flex-row justify-between px-4 py-3">
         <NuxtLink class="items-center flex" to="/">
           <NuxtImg
-            :src="
-              isScrolled || route.path !== '/'
-                ? 'svg/logo.svg'
-                : 'svg/logocolor.svg'
-            "
+            v-show="!menu"
+            :src="isScrolled || !isHome ? 'svg/logo.svg' : 'svg/logocolor.svg'"
             class="self-center transition-all duration-300 h-10"
           ></NuxtImg>
         </NuxtLink>
@@ -39,6 +44,28 @@
         >
           MARCAS
         </NuxtLink>
+        <NuxtLink
+          @click="menu = false"
+          class="hover:cursor-pointer transition-all duration-300"
+          to="/PRODUCTOS"
+        >
+          PRODUCTOS
+        </NuxtLink>
+        <NuxtLink
+          @click="menu = false"
+          class="hover:cursor-pointer transition-all duration-300"
+          to="/EMPRESA"
+        >
+          EMPRESA
+        </NuxtLink>
+        <NuxtLink
+          @click="menu = false"
+          class="hover:cursor-pointer transition-all duration-300"
+          to="https://catalogo.rodaservice.com.ar/"
+          target="_blank"
+        >
+          ACCESO CLIENTES
+        </NuxtLink>
       </div>
     </nav>
   </div>
@@ -49,6 +76,10 @@ import { ref, onMounted, onUnmounted } from "vue";
 const route = useRoute();
 const menu = ref(false);
 const isScrolled = ref(false);
+
+const isHome = computed(() => {
+  return route.path === "/";
+});
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 100;
