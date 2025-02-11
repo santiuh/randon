@@ -1,6 +1,8 @@
 <template>
   <div class="flex place-content-center">
-    <div class="flex flex-col lg:flex-row py-16 justify-center max-w-[1440px] gap-12">
+    <div
+      class="grid grid-cols-2 lg:grid-cols-4 py-16 justify-center max-w-[1440px] gap-5 lg:gap-12"
+    >
       <div
         class="flex flex-col lg:text-2xl font-medium text-center items-center"
       >
@@ -8,7 +10,6 @@
         <p class="text-nowrap">Despacho de mercadería</p>
         <span class="text-nowrap">en menos de 24hs.</span>
       </div>
-      <div class="border h-full"></div>
       <div
         class="flex flex-col lg:text-2xl font-medium text-center items-center"
       >
@@ -16,7 +17,6 @@
         <p class="text-nowrap">Asesoramiento</p>
         <span class="text-nowrap">especializado.</span>
       </div>
-      <div class="border h-full"></div>
 
       <div
         class="flex flex-col lg:text-2xl font-medium text-center items-center"
@@ -25,7 +25,6 @@
         <p class="text-nowrap">Amplio stock</p>
         <span class="text-nowrap">de productos.</span>
       </div>
-      <div class="border h-full"></div>
 
       <div
         class="flex flex-col lg:text-2xl font-medium text-center items-center"

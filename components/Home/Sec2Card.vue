@@ -1,6 +1,6 @@
 <template>
   <div
-    class="lg:h-[657px] w-full px-3 lg:px-9 bg-cover rounded-3xl lg:py-0 py-4 lg:pb-16 gap-9 flex flex-col justify-end hover:shadow-xl shadow-2xl hover:cursor-pointer hover:scale-105 duration-300 transition-all"
+    class="lg:h-[657px] w-full px-3 lg:px-9 bg-cover rounded-2xl lg:rounded-3xl lg:py-0 py-4 lg:pb-16 lg:gap-9 gap-12 flex flex-col justify-end hover:shadow-xl shadow-2xl hover:cursor-pointer hover:scale-105 duration-300 transition-all"
     :style="{ backgroundImage: `url(${bg})` }"
   >
     <div class="flex flex-col text-white">
@@ -8,7 +8,7 @@
       <p class="font-bold text-4xl">{{ title }}</p>
     </div>
     <button
-      class="text-3xl flex flex-row items-center gap-3 bg-tertiary px-5 rounded-xl py-4 w-fit hover:scale-105 brig transition-all"
+      class="lg:text-3xl flex flex-row items-center gap-3 bg-tertiary px-5 rounded-xl py-4 w-fit hover:scale-105 brig transition-all"
     >
       <p>Ver Productos</p>
       <svg

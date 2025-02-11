@@ -1,20 +1,25 @@
 <template>
   <div
-    class="flex flex-col bg-[url('img/Hero/Hero1.png')] bg-cover bg-no-repeat h-[90vh]"
+    class="flex flex-col bg-[url('img/Hero/Hero1.png')] bg-cover bg-no-repeat"
   >
     <div
-      class="max-w-[1440px] px-9 w-full justify-center h-full self-center flex flex-col text-primary text-start gap-10"
+      class="max-w-[1440px] px-9 w-full justify-center h-full self-center flex flex-col text-primary text-start gap-7 lg:gap-10"
     >
-      <div class="flex flex-col text-7xl font-extrabold">
+      <div class="flex flex-col text-4xl lg:text-7xl font-extrabold">
         <p>Importamos directo</p>
-        <p>de fábrica</p>
+        <p class="text-6xl lg:text-7xl">de fábrica</p>
       </div>
-      <span class="font-semibold"
+      <span class="hidden lg:flex flex-col font-semibold text-lg lg:text-base"
         >Somos distribuidores mayoristas de rodamientos,
 
         <p>autopartes y agropartes.</p>
       </span>
-      <div class="flex flex-row gap-8">
+      <span class="flex lg:hidden font-semibold text-lg lg:text-base"
+        >Somos distribuidores mayoristas de rodamientos,
+
+        autopartes y agropartes.
+      </span>
+      <div class="flex flex-col lg:flex-row gap-3 lg:gap-8">
         <VButton
           titulo="Linea de productos"
           class="!bg-primary !text-white !text-xl"

@@ -10,7 +10,7 @@
           rgba(255, 255, 255, 0) 100%
         );
       "
-      class="absolute w-40 h-full right-0 z-10"
+      class="absolute hidden lg:flex w-40 h-full right-0 z-10"
     ></div>
     <div
       style="
@@ -22,11 +22,11 @@
           rgba(255, 255, 255, 0) 100%
         );
       "
-      class="absolute w-40 h-full left-0-0 z-10"
+      class="absolute w-40 hidden lg:flex h-full left-0-0 z-10"
     ></div>
-    <div class="glide__arrows" data-glide-el="controls">
+    <div class="glide__arrows hidden lg:flex" data-glide-el="controls">
       <button
-        class="glide__arrow glide__arrow--left !absolute !z-20 !h-14 !w-14 !bg-white !flex !items-center !drop-shadow-2xl !ml-8 !justify-center !rounded-2xl !top-28"
+        class="glide__arrow glide__arrow--left !absolute !z-20 !h-14 !w-14 !bg-white !flex !items-center !drop-shadow-2xl !justify-center !rounded-2xl !top-28 -ml-5"
         data-glide-dir="<"
       >
         <svg
@@ -53,7 +53,7 @@
         </svg>
       </button>
       <button
-        class="glide__arrow glide__arrow--right !absolute !z-20 !h-14 !w-14 !bg-white !flex !items-center !drop-shadow-2xl !ml-8 !justify-center !rounded-2xl !top-28 right-0 mr-8"
+        class="glide__arrow glide__arrow--right !absolute !z-20 !h-14 !w-14 !bg-white !flex !items-center !drop-shadow-2xl !justify-center !rounded-2xl !top-28 right-0 -mr-5"
         data-glide-dir=">"
       >
         <svg
@@ -84,42 +84,42 @@
       <ul class="glide__slides !py-11">
         <li class="glide__slide">
           <svgo-Sec3_1
-            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
           ></svgo-Sec3_1>
         </li>
         <li class="glide__slide">
           <svgo-Sec3_2
-            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
           ></svgo-Sec3_2>
         </li>
         <li class="glide__slide">
           <svgo-Sec3_3
-            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
           ></svgo-Sec3_3>
         </li>
         <li class="glide__slide">
           <svgo-Sec3_4
-            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
           ></svgo-Sec3_4>
         </li>
         <li class="glide__slide">
           <svgo-Sec3_5
-            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
           ></svgo-Sec3_5>
         </li>
         <li class="glide__slide">
           <svgo-Sec3_3
-            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
           ></svgo-Sec3_3>
         </li>
         <li class="glide__slide">
           <svgo-Sec3_2
-            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
           ></svgo-Sec3_2>
         </li>
         <li class="glide__slide">
           <svgo-Sec3_4
-            class="!w-56 !h-28 rounded-lg shadow-xl p-3"
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
           ></svgo-Sec3_4>
         </li>
       </ul>
@@ -140,6 +140,7 @@ onMounted(() => {
     breakpoints: {
       1280: {
         perView: 1,
+        autoplay: 2000,
       },
     },
     gap: 20,

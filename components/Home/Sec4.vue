@@ -44,10 +44,12 @@
         >
           {{ datos.year }}
           <span
-            class="absolute rounded-full z-10 h-8 w-8 bg-sky-500 -bottom-4 -left-3 animate-ping"
+            class="absolute rounded-full z-10 h-8 w-8 bg-sky-500 -bottom-4 -left-3 animate-ping hover:cursor-pointer"
+            @click="router.push('/Empresa')"
           ></span>
           <span
-            class="absolute rounded-full z-10 h-8 w-8 bg-sky-500 -bottom-4 -left-3"
+            class="absolute rounded-full z-10 h-8 w-8 bg-sky-500 -bottom-4 -left-3 hover:cursor-pointer"
+            @click="router.push('/Empresa')"
           ></span>
         </div>
         <div class="text-xl lg:text-4xl px-11 z-0 slide-left border-l-8 pt-5">
@@ -70,7 +72,7 @@
         <NuxtImg class="lg:!w-1/2" src="svg/Sec4Laptop.svg"></NuxtImg>
         <div class="flex flex-col gap-5">
           <div class="flex flex-col">
-            <p class="text-4xl">Nuevo</p>
+            <p class="text-4xl lg:pt-0 pt-6">Nuevo</p>
             <p class="text-4xl font-semibold">Catálogo Digital</p>
           </div>
           <div class="flex flex-col gap-2">
@@ -113,6 +115,7 @@
   </div>
 </template>
 <script setup>
+const router = useRouter();
 const datos = ref({
   year: "1960",
   info: "Jacinto Amatriain realiza la primer importación de rodamientos desde Inglaterra.",

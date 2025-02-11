@@ -1,6 +1,6 @@
 <template>
   <div class="flex place-content-center bg-tertiary">
-    <div class="flex flex-col pt-20 pb-44 relative w-full px-10 max-w-[1440px]">
+    <div class="flex flex-col pt-20 pb-44 relative w-full px-4 lg:px-10 max-w-[1440px]">
       <h1 class="font-extrabold text-5xl text-[#1C2646] text-center">
         Líneas de Productos
       </h1>
