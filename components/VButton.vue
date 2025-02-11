@@ -23,5 +23,5 @@
   </button>
 </template>
 <script setup>
-const props = defineProps(["titulo", "svg"]);
+const props = defineProps(["titulo"]);
 </script>

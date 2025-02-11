@@ -1,81 +1,135 @@
 <template>
-  <div class="flex flex-row border h-[70vh]">
-    <div class="flex flex-col gap-1 w-1/5 overflow-scroll border bg-white">
+  <div class="flex flex-col lg:flex-row border lg:h-[70vh]">
+    <!-- Lista de marcas -->
+    <div
+      class="flex flex-row lg:flex-col lg:gap-1 lg:w-1/5 overflow-scroll border bg-white"
+    >
       <div
-        class="bg-tertiary pl-12 text-xl py-5 hover:cursor-pointer hover:brightness-90 transition-all duration-300"
-        :class="i === 0 ? ' rounded-tl-3xl' : ''"
+        class="bg-tertiary lg:pl-12 px-5 lg:px-0 text-nowrap text-xl py-5 hover:cursor-pointer hover:brightness-90 transition-all duration-300"
+        :class="
+          (i === 0 ? 'rounded-tl-3xl' : '',
+          i === selectedMarcaId ? 'brightness-90' : '')
+        "
         v-for="(dato, i) in data"
+        :key="i"
         @click="selectedMarcaId = i"
       >
         {{ dato.marca }}
       </div>
     </div>
-    <div class="bg-tertiary flex w-4/5 justify-center items-center">
-      <div class="flex relative px-10">
-        <div class="flex flex-col relative justify-center">
-          <div class="absolute drop-shadow-2xl h-full w-full">
-            <div class="h-1/6"></div>
-            <div class="h-5/6 bg-white w-full rounded-lg shadow-2xl"></div>
-          </div>
+
+    <!-- Contenedor de contenido animado -->
+    <div class="bg-tertiary flex lg:w-4/5 h-full py-6 lg:py-0 justify-center items-center">
+      <transition name="fade-slide" mode="out-in">
+        <div
+          v-if="data[selectedMarcaId]"
+          :key="selectedMarcaId"
+          class="flex relative h-full items-center justify-center"
+        >
           <div
-            class="flex flex-row border-b border-tertiary py-4 z-10 mx-14 gap-8"
+            class="flex pb-14 flex-col relative justify-center h-[70%] px-3 lg:px-0 lg:w-[90%] xl:w-[80%]"
           >
-            <NuxtImg
-              class="drop-shadow-2xl w-1/3 aspect-square border-[#D4D4D4] border p-3 rounded-2xl"
-              style="
-                background: rgb(228, 228, 228);
-                background: linear-gradient(
-                  90deg,
-                  rgba(228, 228, 228, 1) 0%,
-                  rgba(246, 247, 249, 1) 7%,
-                  rgba(239, 239, 239, 1) 86%
-                );
-              "
-              :src="'img/Marcas/' + data[selectedMarcaId].marca + '.png'"
-            ></NuxtImg>
-            <p class="w-2/3 self-end flex">
-              {{ data[selectedMarcaId].texto }}
-            </p>
-          </div>
-          <div class="flex flex-row gap-6 z-10 py-7 px-14">
-            <button
-              class="bg-[#1C2646] flex gap/5 text-white font-medium rounded-lg text-xl w-fit px-5 py-4 items-center"
+            <div
+              class="h-[90%] absolute bottom-0 bg-white w-[95%] lg:w-full rounded-lg shadow-2xl"
+            ></div>
+            <div
+              class="flex flex-col lg:flex-row border-b border-tertiary py-4 z-10 px-3 lg:px-10 gap-8"
             >
-              <span>Catálogo</span>
-            </button>
-            <button
-              class="border-[#1C2646] border-2 flex gap-5 text-xl text-[#1C2646] rounded-lg w-fit font-medium px-5 py-4 items-center"
+              <NuxtImg
+                class="drop-shadow-2xl w-2/3 lg:w-1/3 self-center aspect-square border-[#D4D4D4] border p-3 rounded-2xl"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    rgba(228, 228, 228, 1) 0%,
+                    rgba(246, 247, 249, 1) 7%,
+                    rgba(239, 239, 239, 1) 86%
+                  );
+                "
+                :src="'img/Marcas/' + data[selectedMarcaId].marca + '.png'"
+              ></NuxtImg>
+              <p class="lg:w-2/3 self-center flex lg:pt-10">
+                {{ data[selectedMarcaId].texto }}
+              </p>
+            </div>
+            <div
+              class="flex flex-col-reverse lg:flex-row gap-3 lg:gap-6 z-10 lg:py-7 px-3 lg:px-14"
             >
-              <span>Folletos digitales</span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14.075"
-                height="26.081"
-                viewBox="0 0 14.075 26.081"
+              <button
+                class="text-xl justify-center lg:justify-start lg:text-3xl text-white flex flex-row items-center gap-3 bg-primary px-5 drop-shadow rounded-xl py-4 w-full lg:w-fit hover:scale-105 transition-all"
               >
-                <g
-                  id="Grupo_248"
-                  data-name="Grupo 248"
-                  transform="translate(-5364.583 -971.337)"
+                <p>Catálogo</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30.616"
+                  height="29.275"
+                  viewBox="0 0 30.616 29.275"
                 >
-                  <path
-                    id="Trazado_147"
-                    data-name="Trazado 147"
-                    d="M5365.693,972.346l10.938,12.031-10.937,12.031"
-                    fill="none"
-                    stroke="#1c2646"
-                    stroke-miterlimit="10"
-                    stroke-width="3"
-                  />
-                </g>
-              </svg>
-            </button>
+                  <g
+                    id="Grupo_250"
+                    data-name="Grupo 250"
+                    transform="translate(-5064.633 -967.177)"
+                  >
+                    <g id="Grupo_249" data-name="Grupo 249">
+                      <path
+                        id="Trazado_148"
+                        data-name="Trazado 148"
+                        d="M5087.446,980.109l-7.5,6.823-7.5-6.823"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-miterlimit="10"
+                        stroke-width="3"
+                      />
+                    </g>
+                    <line
+                      id="Línea_19"
+                      data-name="Línea 19"
+                      y2="19.755"
+                      transform="translate(5079.941 967.177)"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                      stroke-width="3"
+                    />
+                    <path
+                      id="Trazado_149"
+                      data-name="Trazado 149"
+                      d="M5066.133,991.281v3.671h27.616v-3.671"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                      stroke-width="3"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <VButton
+                titulo="Folletos Digitales"
+                class="!bg-white !border-2 !border-primary !justify-center"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Animaciones de entrada y salida */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.5s ease;
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+</style>
+
 <script setup>
 const selectedMarcaId = ref(0);
 

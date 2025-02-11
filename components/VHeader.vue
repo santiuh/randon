@@ -15,7 +15,7 @@
     >
       <NuxtImg
         @click="router.push('/')"
-        class="transition-all duration-300 hover:cursor-pointer"
+        class="transition-all duration-300 hover:cursor-pointer hover:scale-105 hover:brightness-90"
         :class="!isHome ? '!h-12' : isScrolled && isHome ? '!h-10' : '!h-12'"
         :src="
           !isHome
@@ -36,10 +36,30 @@
               : 'text-primary'
           "
         >
-          <button @click="goTo('/Marcas')">MARCAS</button>
-          <button @click="goTo('/Productos')">PRODUCTOS</button>
-          <button @click="goTo('/Empresa')">EMPRESA</button>
-          <button @click="goTo('/Clientes')">ACCESO CLIENTES</button>
+          <button
+            class="hover:brightness-75 transition-all duration-300 hover:scale-105"
+            @click="goTo('/Marcas')"
+          >
+            MARCAS
+          </button>
+          <button
+            class="hover:brightness-75 transition-all duration-300 hover:scale-105"
+            @click="goTo('/Productos')"
+          >
+            PRODUCTOS
+          </button>
+          <button
+            class="hover:brightness-75 transition-all duration-300 hover:scale-105"
+            @click="goTo('/Empresa')"
+          >
+            EMPRESA
+          </button>
+          <button
+            class="hover:brightness-75 transition-all duration-300 hover:scale-105"
+            @click="goTo('/Clientes')"
+          >
+            ACCESO CLIENTES
+          </button>
         </div>
         <div
           class="flex flex-row border-l gap-3 px-5 ml-5 items-center"
@@ -51,36 +71,50 @@
               : 'border-l-primary'
           "
         >
-          <svgo-ig
-            class="!h-7 !w-7"
-            :class="
-              !isHome
-                ? 'text-white'
-                : isScrolled && isHome
-                ? 'text-white'
-                : 'text-primary'
-            "
-          ></svgo-ig>
-          <svgo-fb
-            class="!h-7 !w-7"
-            :class="
-              !isHome
-                ? 'text-white'
-                : isScrolled && isHome
-                ? 'text-white'
-                : 'text-primary'
-            "
-          ></svgo-fb>
-          <svgo-li
-            class="!h-7 !w-7"
-            :class="
-              !isHome
-                ? 'text-white'
-                : isScrolled && isHome
-                ? 'text-white'
-                : 'text-primary'
-            "
-          ></svgo-li>
+          <NuxtLink to="https://www.instagram.com/rodaservice/" target="_blank">
+            <svgo-ig
+              class="!h-7 !w-7 hover:brightness-75 transition-all duration-300 hover:scale-105"
+              :class="
+                !isHome
+                  ? 'text-white'
+                  : isScrolled && isHome
+                  ? 'text-white'
+                  : 'text-primary'
+              "
+            ></svgo-ig
+          ></NuxtLink>
+          <NuxtLink
+            to="
+https://www.linkedin.com/company/86398638/admin/page-posts/published/
+"
+            target="_blank"
+          >
+            <svgo-li
+              class="!h-7 !w-7 hover:brightness-75 transition-all duration-300 hover:scale-105"
+              :class="
+                !isHome
+                  ? 'text-white'
+                  : isScrolled && isHome
+                  ? 'text-white'
+                  : 'text-primary'
+              "
+            ></svgo-li
+          ></NuxtLink>
+          <NuxtLink
+            to="https://www.facebook.com/rodaservice/?locale=es_LA "
+            target="_blank"
+          >
+            <svgo-fb
+              class="!h-7 !w-7 hover:brightness-75 transition-all duration-300 hover:scale-105"
+              :class="
+                !isHome
+                  ? 'text-white'
+                  : isScrolled && isHome
+                  ? 'text-white'
+                  : 'text-primary'
+              "
+            ></svgo-fb
+          ></NuxtLink>
         </div>
       </div>
     </div>
@@ -89,7 +123,7 @@
       :style="{
         backgroundImage: `url('/img/${banner}.png')`,
       }"
-      class="flex justify-center bg-cover bg-no-repeat"
+      class="flex justify-center bg-cover bg-center bg-no-repeat"
     >
       <div
         class="text-4xl py-14 flex flex-col text-white text-center"

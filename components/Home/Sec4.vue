@@ -31,6 +31,7 @@
         <VButton
           class="!text-primary w-full lg:w-fit"
           titulo="Conocé nuestra&nbsp;historia"
+          @click="router.push('/Empresa')"
         ></VButton>
       </div>
       <!-- arranca acá -->
@@ -90,14 +91,19 @@
             </div>
           </div>
           <div class="hidden lg:flex flex-row gap-3">
-            <VButton
-              titulo="Acceso Clientes"
-              class="!bg-primary !text-white !text-xl"
-            ></VButton>
-            <VButton
-              titulo="Solicitar Manual de uso"
-              class="!bg-white !border-2 !border-primary !text-xl"
-            ></VButton>
+            <NuxtLink target="_blank" to="https://catalogo.rodaservice.com.ar/">
+              <VButton
+                titulo="Acceso Clientes"
+                class="!bg-primary !text-white !text-xl border-primary border-2"
+                @click=""
+              ></VButton>
+            </NuxtLink>
+            <NuxtLink target="_blank" to="https://catalogo.rodaservice.com.ar/">
+              <VButton
+                titulo="Solicitar Manual de uso"
+                class="!bg-white !border-2 !border-primary !text-xl"
+              ></VButton>
+            </NuxtLink>
           </div>
         </div>
       </div>

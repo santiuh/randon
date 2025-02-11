@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[url('img/Rodagray.png')] py-4 px-2  bg-center bg-cover flex flex-col lg:flex-row transition-all text-white rounded-3xl lg:px-20 lg:p-9 justify-between w-fit gap-3 lg:gap-36 self-center absolute bottom-[-75px] select-none hover:scale-105 bg-blend-multiply hover:bg-secondary duration-500"
+    class="bg-[url('img/RodaGray.png')] py-4 px-2  bg-center bg-cover flex flex-col lg:flex-row transition-all text-white rounded-3xl lg:px-20 lg:p-9 justify-between w-fit gap-3 lg:gap-36 self-center absolute bottom-[-75px] select-none hover:scale-105 bg-blend-multiply hover:bg-secondary duration-500"
   >
     <div class="flex flex-col lg:gap-3 text-center lg:text-start">
       <p class="font-extrabold text-xl lg:text-4xl">

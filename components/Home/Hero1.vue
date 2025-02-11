@@ -5,7 +5,7 @@
     <div
       class="max-w-[1440px] px-9 w-full justify-center h-full self-center flex flex-col text-primary text-start gap-7 lg:gap-10"
     >
-      <div class="flex flex-col text-4xl lg:text-7xl font-extrabold">
+      <div class="flex flex-col text-3xl lg:text-7xl font-extrabold">
         <p>Importamos directo</p>
         <p class="text-6xl lg:text-7xl">de fábrica</p>
       </div>

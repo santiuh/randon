@@ -7,7 +7,7 @@
     class="flex lg:hidden justify-center bg-cover bg-center bg-no-repeat"
   >
     <div
-      class="text-4xlflex flex-col text-white text-center pt-24 pb-8"
+      class="text-4xl flex flex-col text-white text-center pt-24 pb-8"
       v-if="route.path?.includes('Productos')"
     >
       <h1 class="font-extrabold text-4xl relative">
@@ -23,7 +23,7 @@
         </p>
       </h1>
     </div>
-    <h1 v-else class="font-extrabold text-4xl pt-24 pb-12 flex text-white">
+    <h1 v-else class="font-extrabold text-3xl lg:text-4xl pt-24 pb-10 flex text-white">
       {{ banner }}
     </h1>
   </div>

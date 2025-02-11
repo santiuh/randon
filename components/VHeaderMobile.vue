@@ -12,7 +12,7 @@
         ' bg-primary ': !isHome,
       }"
     >
-      <div class="w-full flex flex-row justify-between px-4 py-3">
+      <div class="w-full flex flex-row relative justify-between px-4 py-3">
         <NuxtLink class="items-center flex" to="/">
           <NuxtImg
             v-show="!menu"
@@ -20,11 +20,14 @@
             class="self-center transition-all duration-300 h-10"
           ></NuxtImg>
         </NuxtLink>
-        <NuxtImg
+        <svgo-menu
           @click="menu = !menu"
-          class="pt-1"
+          class="!w-6 !h-auto absolute right-5 top-5"
+          :class="{
+            ' !stroke-primary': !isScrolled && isHome && !menu,
+          }"
           src="svg/menu.svg"
-        ></NuxtImg>
+        ></svgo-menu>
       </div>
       <div
         :class="menu ? 'h-56' : 'h-0'"

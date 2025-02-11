@@ -22,7 +22,7 @@
         ></span>
       </div>
       <div
-        class="text-xl lg:text-2xl lg:px-11 px-5 z-0"
+        class="text-lg lg:text-2xl lg:px-11 px-5 z-0"
         :data-aos="par ? 'slide-left' : 'slide-right'"
       >
         {{ datos.info }}
@@ -30,7 +30,7 @@
     </div>
     <div
       style="position-area: center"
-      class="absolute h-full border-8 bg-primary border-primary flex shadow-2xl"
+      class="absolute h-full border-4 lg:border-8 bg-primary border-primary flex shadow-2xl"
       :class="id === 0 ? 'rounded-t-full' : ''"
     ></div>
   </div>
