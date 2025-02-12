@@ -6,12 +6,12 @@
     <div
       data-aos="slide-up"
       class="flex w-1/2 flex-col text-primary gap-6 z-20"
-      :class="par ? 'self-start' : 'self-end text-end'"
+      :class="par ? 'justify-start' : 'justify-end text-end'"
     >
       <div
         class="border-b-primary relative border-b font-extrabold text-3xl px-5 lg:px-11 pb-3 shadow-xl"
       >
-        {{ datos.year }}
+        {{ datos.year }}v
         <span
           :class="par ? '-bottom-4 -left-4' : '-right-4 -bottom-4'"
           class="absolute rounded-full z-10 h-8 w-8 bg-sky-500"
