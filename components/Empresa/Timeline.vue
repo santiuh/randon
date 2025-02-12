@@ -1,17 +1,17 @@
 <template>
   <div
     class="flex w-full relative pt-10"
-    :class="par ? 'place-content-end' : 'place-content-start'"
+    :class="par ? 'justify-end items-start' : 'justify-start items-end'"
   >
     <div
       data-aos="slide-up"
       class="flex w-1/2 flex-col text-primary gap-6 z-20"
-      :class="par ? 'justify-start' : 'justify-end text-end'"
+      :class="par ? 'self-start' : 'self-end text-end'"
     >
       <div
         class="border-b-primary relative border-b font-extrabold text-3xl px-5 lg:px-11 pb-3 shadow-xl"
       >
-        {{ datos.year }}v
+        {{ datos.year }}A
         <span
           :class="par ? '-bottom-4 -left-4' : '-right-4 -bottom-4'"
           class="absolute rounded-full z-10 h-8 w-8 bg-sky-500"
