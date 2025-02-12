@@ -29,9 +29,9 @@
       </div>
     </div>
     <div
-      style="position-area: center"
       class="absolute h-full border-4 lg:border-8 bg-primary border-primary flex shadow-2xl"
       :class="id === 0 ? 'rounded-t-full' : ''"
+      style="left: 50%; transform: translateX(-50%)"
     ></div>
   </div>
 </template>
