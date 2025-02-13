@@ -16,13 +16,13 @@
     >
       <div class="flex flex-col lg:w-4/5">
         <div class="flex flex-col gap-3 mb-12 lg:w-3/5">
-          <h1 class="font-extrabold text-4xl lg:text-7xl text-nowrap">
+          <h1 class="font-extrabold text-4xl lg:text-6xl text-nowrap">
             Más de 50 años
           </h1>
-          <h1 class="font-extrabold text-4xl lg:text-7xl text-nowrap">
+          <h1 class="font-extrabold text-4xl lg:text-6xl text-nowrap">
             en el mercado
           </h1>
-          <p class="text-xl lg:text-3xl">
+          <p class="text-xl lg:text-2xl">
             Nuestro objetivo es brindar el mejor servicio, por eso contamos con
             gran stock de las mejores marcas.
           </p>
