@@ -10,10 +10,10 @@
       ></NuxtImg>
       <div class="flex flex-row">
         <div class="font-medium text-lg flex flex-row gap-3">
-          <button @click="goTo('/Marcas')">MARCAS</button>
-          <button @click="goTo('/Productos')">PRODUCTOS</button>
-          <button @click="goTo('/Empresa')">EMPRESA</button>
-          <button @click="goTo('/Clientes')">ACCESO CLIENTES</button>
+          <button @click="goTo('/MARCAS')">MARCAS</button>
+          <button @click="goTo('/PRODUCTOS')">PRODUCTOS</button>
+          <button @click="goTo('/EMPRESA')">EMPRESA</button>
+          <button @click="goTo('/CLIENTES')">ACCESO CLIENTES</button>
         </div>
         <div class="flex flex-row border-l border-primary">
           <NuxtImg src="/svg/ig2.svg"></NuxtImg>

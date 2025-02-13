@@ -161,7 +161,7 @@ const isHome = computed(() => {
 
 const banner = computed(() => {
   const path = route.path.split("/").filter(Boolean).pop();
-  return path || "default";
+  return path.toUpperCase || "default";
 });
 
 // Estado para controlar el fondo cuando se hace scroll
