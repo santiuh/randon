@@ -38,19 +38,19 @@
         >
           <button
             class="hover:brightness-75 transition-all duration-300 hover:scale-105"
-            @click="goTo('/MARCAS')"
+            @click="goTo('/Marcas')"
           >
             MARCAS
           </button>
           <button
             class="hover:brightness-75 transition-all duration-300 hover:scale-105"
-            @click="goTo('/PRODUCTOS')"
+            @click="goTo('/Productos')"
           >
             PRODUCTOS
           </button>
           <button
             class="hover:brightness-75 transition-all duration-300 hover:scale-105"
-            @click="goTo('/EMPRESA')"
+            @click="goTo('/Empresa')"
           >
             EMPRESA
           </button>
@@ -161,7 +161,7 @@ const isHome = computed(() => {
 
 const banner = computed(() => {
   const path = route.path.split("/").filter(Boolean).pop();
-  return path || "default";
+  return path ? path.toUpperCase() : "default";
 });
 
 // Estado para controlar el fondo cuando se hace scroll
