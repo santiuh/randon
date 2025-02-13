@@ -12,28 +12,69 @@
 </template>
 <script setup>
 const productos = [
-  { texto: "Crapodinas a rodillos de punta de eje", imagen: "Automotor1.png" },
-  { texto: "Crapodinas de embrague", imagen: "Automotor2.png" },
-  { texto: "Crapodinas de embrague", imagen: "Automotor3.png" }, // Repetido en el texto original
-  { texto: "Crapodinas hidráulicas", imagen: "Automotor4.png" },
-  { texto: "Ejes de bombas de agua", imagen: "Automotor5.png" },
-  { texto: "Grasas y lubricantes", imagen: "Automotor6.png" },
-  { texto: "Jaulas de agujas Pesaro", imagen: "Automotor7.png" },
-  { texto: "Jaulas de agujas", imagen: "Automotor8.png" },
-  { texto: "Kit tensor más correa", imagen: "Automotor9.png" },
-  { texto: "Mazas de rueda", imagen: "Automotor10.png" },
-  { texto: "Mazas de ruedas con ABS magnéticos", imagen: "Automotor11.png" },
-  { texto: "Productos Loctite", imagen: "Automotor12.png" },
-  { texto: "Reformas cardan", imagen: "Automotor13.png" },
-  { texto: "Reformas para centro de cardan", imagen: "Automotor14.png" },
-  { texto: "Retenes y crapodinas DBH", imagen: "Automotor15.png" },
   {
-    texto: "Rodamientos de una hilera de rodillos cónicos",
-    imagen: "Automotor16.png",
+    texto: "Bolas de acero milimetricas y en pulgadas",
+    imagen: "Industrial.png",
   },
-  { texto: "Tensores INA", imagen: "Automotor17.png" },
-  { texto: "Tensores Kugellager", imagen: "Automotor18.png" },
-  { texto: "Tensores SKF", imagen: "Automotor19.png" },
-  { texto: "Tensores VAR", imagen: "Automotor20.png" },
+  {
+    texto: "Rodamientos axiales crapodina de una hilera de bolas",
+    imagen: "Industrial2.png",
+  },
+  {
+    texto: "Rodamientos axiales de rodillos esfericos",
+    imagen: "Industrial3.png",
+  },
+  {
+    texto: "Rodamientos de agujas con anillo interior",
+    imagen: "Industrial4.png",
+  },
+  { texto: "Rodamientos de agujas en pulgadas", imagen: "Industrial5.png" },
+  { texto: "Rodamientos de agujas milimetricos", imagen: "Industrial6.png" },
+  {
+    texto: "Rodamientos de dos hileras de bolas de contacto angular",
+    imagen: "Industrial7.png",
+  },
+  {
+    texto: "Rodamientos de dos hileras de bolas de contacto radial",
+    imagen: "Industrial8.png",
+  },
+  {
+    texto: "Rodamientos de dos hileras de rodillos esfericos",
+    imagen: "Industrial9.png",
+  },
+  {
+    texto: "Rodamientos de una hilera de bolas de contacto angular",
+    imagen: "Industrial10.png",
+  },
+  {
+    texto: "Rodamientos de una hilera de rodillos cilindricos",
+    imagen: "Industrial11.png",
+  },
+  {
+    texto: "Rodamientos de una hilera de rodillos conico milimetrico",
+    imagen: "Industrial12.png",
+  },
+  { texto: "Rodamientos miniaturas", imagen: "Industrial13.png" },
+  {
+    texto: "Rodamientos oscilante de dos hileras de bolas",
+    imagen: "Industrial14.png",
+  },
+  {
+    texto:
+      "Rodamientos oscilantes de dos hileras de bolas con interior partido",
+    imagen: "Industrial15.png",
+  },
+  {
+    texto: "Rodamientos una hilera bolas",
+    imagen: "Industrial16.png",
+  },
+  {
+    texto: "Rodillos de acero en milimetros y en pulgadas",
+    imagen: "Industrial17.png",
+  },
+  { texto: "Rotulas con perno hembra", imagen: "Industrial18.png" },
+  { texto: "Rotulas con perno macho(POSB)", imagen: "Industrial19.png" },
+  { texto: "Seguros seeger", imagen: "Industrial20.png" },
+  { texto: "Soportes bipartidos", imagen: "Industrial21.png" },
 ];
 </script>
