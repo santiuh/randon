@@ -38,19 +38,19 @@
         >
           <button
             class="hover:brightness-75 transition-all duration-300 hover:scale-105"
-            @click="goTo('/Marcas')"
+            @click="goTo('/MARCAS')"
           >
             MARCAS
           </button>
           <button
             class="hover:brightness-75 transition-all duration-300 hover:scale-105"
-            @click="goTo('/Productos')"
+            @click="goTo('/PRODUCTOS')"
           >
             PRODUCTOS
           </button>
           <button
             class="hover:brightness-75 transition-all duration-300 hover:scale-105"
-            @click="goTo('/Empresa')"
+            @click="goTo('/EMPRESA')"
           >
             EMPRESA
           </button>
