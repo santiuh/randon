@@ -40,6 +40,6 @@ const isHome = computed(() => {
 
 const banner = computed(() => {
   const path = route.path.split("/").filter(Boolean).pop();
-  return path ? path.toUpperCase() : "DEFAULT";
+  return path || "default";
 });
 </script>
