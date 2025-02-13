@@ -108,19 +108,94 @@
           ></svgo-Sec3_5>
         </li>
         <li class="glide__slide">
-          <svgo-Sec3_3
+          <svgo-Sec3_6
             class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_3>
+          ></svgo-Sec3_6>
         </li>
         <li class="glide__slide">
-          <svgo-Sec3_2
+          <svgo-Sec3_7
             class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_2>
+          ></svgo-Sec3_7>
         </li>
         <li class="glide__slide">
-          <svgo-Sec3_4
+          <svgo-Sec3_8
             class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_4>
+          ></svgo-Sec3_8>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_9
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_9>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_10
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_10>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_11
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_11>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_12
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_12>
+        </li>
+        <li class="glide__slide"> 
+          <svgo-Sec3_13
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_13>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_14
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_14>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_15
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_15>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_16
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_16>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_17
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_17>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_18
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_18>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_19
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_19>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_20
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_20>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_21
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_21>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_22
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_22>
+        </li>
+        <li class="glide__slide">
+          <svgo-Sec3_23
+            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
+          ></svgo-Sec3_23>
         </li>
       </ul>
     </div>

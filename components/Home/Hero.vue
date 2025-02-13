@@ -34,7 +34,6 @@ onMounted(() => {
     perView: 1,
     autoplay: 4000,
     hoverpause: false,
-    autoplay: false,
   });
   glideInstance.mount();
 });

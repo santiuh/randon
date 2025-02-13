@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col lg:flex-row border lg:h-[70vh]">
+  <div class="flex flex-col lg:flex-row border lg:h-[660px] xl:h-[670px]">
     <!-- Lista de marcas -->
     <div
       class="flex flex-row lg:flex-col lg:gap-1 lg:w-1/5 overflow-scroll border bg-white"
@@ -19,7 +19,9 @@
     </div>
 
     <!-- Contenedor de contenido animado -->
-    <div class="bg-tertiary flex lg:w-4/5 h-full py-6 lg:py-0 justify-center items-center">
+    <div
+      class="bg-tertiary flex lg:w-4/5 h-full py-6 lg:py-0 justify-center items-center"
+    >
       <transition name="fade-slide" mode="out-in">
         <div
           v-if="data[selectedMarcaId]"
