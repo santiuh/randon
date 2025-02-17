@@ -52,10 +52,10 @@
               <div class="flex flex-col gap-3 lg:w-2/3 self-center lg:pt-10">
                 <div
                   v-if="data[selectedMarcaId].svg"
-                  class="px-1 self-start overflow-hidden rounded-md border-tertiary border py-2 shadow-inner"
+                  class="px-1 self-center lg:self-start overflow-hidden rounded-md border-tertiary border py-2 mb-3 lg:mb-0 shadow-inner"
                 >
                   <NuxtImg
-                    class="!max-h-10 !h-auto !w-auto"
+                    class="lg:!max-h-10 !h-10 lg:!h-auto !w-auto"
                     :src="'svg/Sec3_' + data[selectedMarcaId].svg"
                   ></NuxtImg>
                 </div>
