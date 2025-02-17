@@ -14,10 +14,15 @@
         confianza.
       </span>
       <VButton
+        @click="openWindow()"
         titulo="Contactanos"
         class="!bg-primary !text-white !text-xl"
       ></VButton>
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+const openWindow = () => {
+  window.open("https://api.whatsapp.com/send?phone=5493415709283", "_blank");
+};
+</script>

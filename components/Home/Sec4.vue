@@ -98,12 +98,12 @@
                 @click=""
               ></VButton>
             </NuxtLink>
-            <NuxtLink target="_blank" to="https://catalogo.rodaservice.com.ar/">
-              <VButton
-                titulo="Solicitar Manual de uso"
-                class="!bg-white !border-2 !border-primary !text-xl"
-              ></VButton>
-            </NuxtLink>
+
+            <VButton
+              @click="openWindow()"
+              titulo="Solicitar Manual de uso"
+              class="!bg-white !border-2 !border-primary !text-xl"
+            ></VButton>
           </div>
         </div>
       </div>
@@ -126,4 +126,7 @@ const datos = ref({
   year: "1960",
   info: "Jacinto Amatriain realiza la primer importación de rodamientos desde Inglaterra.",
 });
+const openWindow = () => {
+  window.open("https://api.whatsapp.com/send?phone=5493415709283", "_blank");
+};
 </script>

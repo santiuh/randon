@@ -1,5 +1,5 @@
 <template>
-  <div ref="glideRef" class="glide">
+  <div ref="glideRef3" class="glide">
     <div
       style="
         background: rgb(255, 255, 255);
@@ -83,102 +83,31 @@
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides !py-11">
         <li class="glide__slide">
-          <svgo-Sec3_1
+          <svgo-Sec3_6
             class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_1>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_2
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_2>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_3
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_3>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_4
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_4>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_5
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_5>
+          ></svgo-Sec3_6>
         </li>
 
-        <li class="glide__slide">
-          <svgo-Sec3_7
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_7>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_8
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_8>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_9
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_9>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_10
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_10>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_11
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_11>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_12
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_12>
-        </li>
         <li class="glide__slide">
           <svgo-Sec3_13
             class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
           ></svgo-Sec3_13>
         </li>
-
         <li class="glide__slide">
-          <svgo-Sec3_15
+          <svgo-Sec3_14
             class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_15>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_16
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_16>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_17
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_17>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_18
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_18>
+          ></svgo-Sec3_14>
         </li>
 
         <li class="glide__slide">
-          <svgo-Sec3_21
+          <svgo-Sec3_19
             class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_21>
+          ></svgo-Sec3_19>
         </li>
         <li class="glide__slide">
-          <svgo-Sec3_22
+          <svgo-Sec3_20
             class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_22>
-        </li>
-        <li class="glide__slide">
-          <svgo-Sec3_23
-            class="lg:!w-56 lg:!h-28 !w-full !h-40 rounded-lg shadow-xl p-3"
-          ></svgo-Sec3_23>
+          ></svgo-Sec3_20>
         </li>
       </ul>
     </div>
@@ -189,10 +118,10 @@
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 const data = ref([""]);
-const glideRef = ref(null);
+const glideRef3 = ref(null);
 
 onMounted(() => {
-  const glideInstance = new Glide(glideRef.value, {
+  const glideInstance = new Glide(glideRef3.value, {
     type: "carousel",
     perView: 5,
     breakpoints: {
