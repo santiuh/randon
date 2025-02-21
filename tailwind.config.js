@@ -11,9 +11,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#1C2646",
-        secondary: "#0071BC",
-        tertiary: "#F2F2F2",
+        primary: "#1C1C1C",
+        secondary: "#009FE3",
+        tertiary: "#009FE1",
+        gray: "#EDEEEF",
       },
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],

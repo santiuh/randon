@@ -1,5 +1,18 @@
 <template>
-  <div class="flex place-content-center bg-tertiary">
+  <div class="flex w-full relative">
+    <NuxtImg src="/svg/bgsec2.svg" class="!w-full !h-auto"></NuxtImg>
+    <div class="absolute flex flex-col w-full h-full">
+      <div class="h-1/2 flex flex-col max-w-[1440px] self-center w-full  justify-end gap-2">
+        <div class="flex flex-col text-4xl font-black text-black">
+          <span>¿BUSCÁS UN</span>
+          <span>CONCESIONARIO?</span>
+        </div>
+        <VButton titulo="ENCONTRÁ UNO CERCA TUYO"></VButton>
+      </div>
+      <div class="h-1/2"></div>
+    </div>
+  </div>
+  <!-- <div class="flex place-content-center bg-tertiary">
     <div class="flex flex-col pt-20 pb-44 relative w-full px-4 lg:px-10 max-w-[1440px]">
       <h1 class="font-extrabold text-5xl text-[#1C2646] text-center">
         Líneas de Productos
@@ -26,7 +39,7 @@
       </div>
       <HomeRodaPill></HomeRodaPill>
     </div>
-  </div>
+  </div> -->
 </template>
 <script setup lang="ts">
 import Sec2Card from "./Sec2Card.vue";

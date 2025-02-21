@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <VHeaderMobile class="lg:hidden"></VHeaderMobile>
-    <VBannerMobile></VBannerMobile>
+  <div class="bg-primary">
     <VHeader></VHeader>
     <slot />
     <WhatsApp></WhatsApp>

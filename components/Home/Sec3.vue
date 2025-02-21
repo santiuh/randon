@@ -1,5 +1,5 @@
 <template>
-  <div
+  <!-- <div
     class="flex flex-col lg:px-0 py-44 gap-10 w-screen lg:max-w-[1440px] self-center"
   >
     <div class="flex flex-col w-full">
@@ -24,5 +24,5 @@
 
       <HomeSec3Carroucel2></HomeSec3Carroucel2>
     </div>
-  </div>
+  </div> -->
 </template>

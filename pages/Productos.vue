@@ -1,49 +1,53 @@
 <template>
-  <div class="flex flex-col">
-    <div class="flex place-content-center bg-tertiary">
-      <div class="flex flex-row justify-around py-4 lg:py-8 max-w-[1440px] w-full">
-        <div class="flex flex-col gap-1 text-[#1C2646]">
-          <button
-            @click="router.push('/Productos')"
-            class="lg:text-xl flex flex-col lg:flex-row items-center lg:gap-2"
-          >
-            <span>Línea</span><span class="font-bold">Automotor</span>
-          </button>
-          <hr
-            v-if="route.path === '/Productos'"
-            class="lg:w-32 w-12 rounded-full border-secondary self-center border-2"
+  <div class="flex flex-col w-full">
+    <div
+      class="w-full bg-[url('/img/productosbg.png')] bg-cover bg-no-repeat justify-center flex"
+    >
+      <div
+        class="flex flex-row gap-1 italic font-bold text-6xl max-w-[1440px] w-full px-32 py-28 items-baseline"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="59.145"
+          height="40.998"
+          viewBox="0 0 59.145 40.998"
+        >
+          <path
+            id="Trazado_108"
+            data-name="Trazado 108"
+            d="M4820.587,289.348l30.269-30.269,10.729-10.729h18.147l-41.174,41Z"
+            transform="translate(-4820.587 -248.35)"
+            fill="#fff"
           />
-        </div>
-        <div class="flex flex-col gap-1 text-[#1C2646]">
-          <button
-            @click="router.push('/Productos/Agricola')"
-            class="lg:text-xl flex flex-col lg:flex-row items-center lg:gap-2"
-          >
-            <span>Línea</span><span class="font-bold">Agrícola</span>
-          </button>
-          <hr
-            v-if="route.path === '/Productos/Agricola'"
-            class="lg:w-32 w-12 rounded-full border-secondary self-center border-2"
-          />
-        </div>
-        <div class="flex flex-col gap-1 text-[#1C2646]">
-          <button
-            @click="router.push('/Productos/Industrial')"
-            class="lg:text-xl flex flex-col lg:flex-row items-center lg:gap-2"
-          >
-            <span>Línea</span><span class="font-bold"> Industrial</span>
-          </button>
-          <hr
-            v-if="route.path === '/Productos/Industrial'"
-            class="lg:w-32 w-12 rounded-full border-secondary self-center border-2"
-          />
-        </div>
+        </svg>
+
+        <h1>PRODUCTOS</h1>
       </div>
     </div>
-    <NuxtPage class="max-w-[1440px] lg:px-32 px-4 self-center"></NuxtPage>
+    <div class="w-full bg-gray flex justify-center">
+      <div
+        class="max-w-[1440px] px-32 py-24 gap-10 w-full grid grid-cols-4 gap"
+      >
+        <ProductosProducto
+          :img="producto.img"
+          :texto="producto.texto"
+          v-for="producto in data"
+        ></ProductosProducto>
+      </div>
+    </div>
   </div>
 </template>
 <script setup>
-const route = useRoute();
-const router = useRouter();
+const data = [
+  { img: "acoplado.png", texto: "Acoplado" },
+  { img: "semirremolque.png", texto: "Semirremolque carga seca" },
+  { img: "batea.png", texto: "Batea" },
+  { img: "sider.png", texto: "Sider" },
+  { img: "furgonpaq.png", texto: "Furgón paquetero" },
+  { img: "furgonfrig.png", texto: "Furgón frigorífico" },
+  { img: "tanque.png", texto: "Tanque" },
+  { img: "silo.png", texto: "Silo" },
+  { img: "carreton.png", texto: "Carretón" },
+  { img: "portajumbo.png", texto: "Portajumbo" },
+];
 </script>

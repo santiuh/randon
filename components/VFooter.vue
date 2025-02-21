@@ -1,56 +1,42 @@
 <template>
-  <div class="flex bg-primary place-content-center pt-24 pb-32 z-40">
+  <div
+    class="flex animate-gradient bg-gradient-to-l from-[#2E2E2E] to-[#000000] place-content-center pt-28 pb-20 z-40"
+  >
     <div
-      class="flex-col lg:flex-row gap-6 lg:gap-0 items-center lg:items-start text-center lg:text-start flex text-white lg:justify-around w-full max-w-[1440px]"
+      class="flex-col lg:flex-row gap-6 lg:gap-0 items-center text-center lg:text-start flex text-xl lg:justify-around w-full max-w-[1440px] px-32"
     >
       <NuxtImg class="!h-14 self-center" src="/svg/logo.svg"></NuxtImg>
-      <div class="flex flex-col gap-3 lg:gap-6">
-        <div class="font-bold text-2xl">Contactanos</div>
-        <div class="flex flex-row text-lg gap-6 items-center">
-          <NuxtImg class="h-5" src="svg/footergps.svg"></NuxtImg>
-          <div class="flex flex-col">
-            <span>San Martín 2437 - Rosario </span>
-            <span>Prov. de Santa Fé - Argentina </span>
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row text-lg gap-3 items-center">
-          <button
-            @click="openWindow()"
-            class="flex flex-row gap-3 items-center"
-          >
-            <NuxtImg class="h-5" src="svg/footerwsp.svg"></NuxtImg>
-            <span>+54 9 341 5709283</span>
-          </button>
-          <button class="flex flex-row gap-3 items-center">
-            <NuxtImg class="h-5" src="svg/footerphone.svg"></NuxtImg>
-            <span>0341 5278954</span>
-          </button>
-        </div>
-        <a
-          href="mailto:rosario@rodaservice.com.ar"
-          class="flex flex-row text-lg gap-3 items-center"
-        >
-          <NuxtImg class="h-5" src="svg/footermail.svg"></NuxtImg>
-          <span>rosario@rodaservice.com.ar</span>
-        </a>
+      <div class="h-full border-l"></div>
+      <div class="flex flex-col py-4">
+        <span>Ruta Provincial 16, Km 4,5 </span>
+        <span>Alvear, Santa Fe, Argentina </span>
+        <span>C2000, Rosario </span>
       </div>
-      <div class="flex flex-col gap-3 lg:gap-6 items-center lg:items-start">
-        <div class="font-bold text-2xl flex">Redes Sociales</div>
-        <div class="flex flex-row gap-3">
-          <NuxtLink to="https://www.instagram.com/rodaservice/" target="_blank"
-            ><svgo-ig class="!h-7 !w-7"></svgo-ig
-          ></NuxtLink>
-          <NuxtLink
-            to="https://www.linkedin.com/company/86398638/admin/page-posts/published/"
-            target="_blank"
-            ><svgo-fb class="!h-7 !w-7"></svgo-fb
-          ></NuxtLink>
-          <NuxtLink
-            to="https://www.facebook.com/rodaservice/?locale=es_LA"
-            target="_blank"
-            ><svgo-li class="!h-7 !w-7"></svgo-li
-          ></NuxtLink>
-        </div>
+      <div class="h-full border-l"></div>
+      <div class="flex flex-row gap-4 items-center h-full">
+        <svgo-tel class="!h-9 !w-auto"></svgo-tel>
+        <span>0341 317-7400</span>
+      </div>
+      <div class="h-full border-l"></div>
+      <div class="flex flex-row gap-4">
+        <NuxtLink
+          to="https://www.instagram.com/rodaservice/"
+          target="_blank"
+          class="p-3 bg-[#222222] rounded-xl flex items-center"
+          ><svgo-wsp class="!h-7 !w-7"></svgo-wsp
+        ></NuxtLink>
+        <NuxtLink
+          to="https://www.facebook.com/rodaservice/?locale=es_LA"
+          target="_blank"
+          class="p-3 bg-[#222222] rounded-xl flex items-center"
+          ><svgo-li class="!h-7 !w-7"></svgo-li
+        ></NuxtLink>
+        <NuxtLink
+          to="https://www.linkedin.com/company/86398638/admin/page-posts/published/"
+          target="_blank"
+          class="p-3 bg-[#222222] rounded-xl flex items-center"
+          ><svgo-ig class="!h-7 !w-7"></svgo-ig
+        ></NuxtLink>
       </div>
     </div>
   </div>
