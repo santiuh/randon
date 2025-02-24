@@ -13,7 +13,7 @@
         <NuxtLink class="items-center flex" to="/">
           <NuxtImg
             v-show="!menu"
-            :src="isScrolled || !isHome ? 'svg/logo.svg' : 'svg/logocolor.svg'"
+            src="svg/logo.svg"
             class="self-center transition-all duration-300 h-10"
           ></NuxtImg>
         </NuxtLink>
@@ -43,7 +43,7 @@
           active-class="text-secondary"
           @click="menu = false"
           class="hover:cursor-pointer transition-all duration-300"
-          to="/producto"
+          to="/productos"
         >
           PRODUCTOS
         </NuxtLink>

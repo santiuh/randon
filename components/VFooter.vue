@@ -3,21 +3,24 @@
     class="flex animate-gradient bg-gradient-to-l from-[#2E2E2E] to-[#000000] place-content-center pt-28 pb-20 z-40"
   >
     <div
-      class="flex-col lg:flex-row gap-6 lg:gap-0 items-center text-center lg:text-start flex text-xl lg:justify-around w-full max-w-[1440px] xl:px-32 px-4"
+      class="flex-col lg:flex-row gap-6 lg:gap-0 items-center text-center lg:text-start flex text-xl lg:justify-around w-full xl:max-w-[1440px] xl:px-32 px-4"
     >
-      <NuxtImg class="!h-14 self-center" src="/svg/logo.svg"></NuxtImg>
-      <div class="h-full border-l"></div>
+      <NuxtImg
+        class="w-3/4 xl:w-auto xl:!h-14 self-center"
+        src="/svg/logo.svg"
+      ></NuxtImg>
+      <div class="hidden xl:flex h-full border-l"></div>
       <div class="flex flex-col py-4">
         <span>Ruta Provincial 16, Km 4,5 </span>
         <span>Alvear, Santa Fe, Argentina </span>
         <span>C2000, Rosario </span>
       </div>
-      <div class="h-full border-l"></div>
+      <div class="hidden xl:flex h-full border-l"></div>
       <div class="flex flex-row gap-4 items-center h-full">
         <svgo-tel class="!h-9 !w-auto"></svgo-tel>
         <span>0341 317-7400</span>
       </div>
-      <div class="h-full border-l"></div>
+      <div class="hidden xl:flex h-full border-l"></div>
       <div class="flex flex-row gap-4">
         <NuxtLink
           to="https://api.whatsapp.com/send?phone=5493417484539"

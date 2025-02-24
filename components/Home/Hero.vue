@@ -3,20 +3,31 @@
     class="flex relative justify-center w-full h-[85vh] bg-[url('/img/home.png')] bg-no-repeat bg-cover bg-center"
   >
     <div
-      class="max-w-[1440px] flex flex-col pt-20 w-full justify-start z-10 lg:xl:px-32 px-4"
+      class="xl:max-w-[1440px] flex flex-col xl:pt-20 h-full absolute top-[20%] xl:static w-full xl:justify-start z-10 xl:px-32 px-4"
     >
       <div
-        class="flex flex-col italic text-7xl font-bold text-white drop-shadow-2xl"
+        class="flex flex-col flex-wrap italic text-5xl xl:text-7xl font-bold text-white"
       >
-        <p>SOLO INNOVA</p>
-        <p>QUIEN SE MUEVE</p>
+        <p
+          data-aos="slide-right"
+          data-aos-delay="200"
+          class="[text-shadow:_5px_10px_13px_rgb(0_0_0_/_60%)] drop-shadow-lg"
+        >
+          SOLO INNOVA
+        </p>
+        <p
+          data-aos="slide-right"
+          data-aos-delay="500"
+          class="[text-shadow:_5px_10px_13px_rgb(0_0_0_/_60%)] drop-shadow-lg"
+        >
+          QUIEN SE MUEVE
+        </p>
       </div>
     </div>
     <svg
-      class="flex absolute left-0 h-10 lg:w-auto lg:h-auto"
+      data-aos="slide-right"
+      class="flex absolute left-0 lg:w-[492px] w-2/3 h-auto lg:h-[710px]"
       xmlns="http://www.w3.org/2000/svg"
-      width="492.069"
-      height="710.467"
       viewBox="0 0 492.069 710.467"
     >
       <path
@@ -28,11 +39,10 @@
       />
     </svg>
     <svg
-      class="flex absolute right-0 bottom-0"
+      data-aos="slide-left"
+      class="flex absolute right-0 bottom-0 w-2/3 h-auto xl:w-[525px] xl:h-[318px]"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="525.964"
-      height="318.709"
       viewBox="0 0 525.964 318.709"
     >
       <defs>

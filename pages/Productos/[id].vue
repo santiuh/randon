@@ -4,12 +4,19 @@
       class="bg-[url('/img/Productos/fondo.png')] bg-no-repeat bg-cover h-screen flex flex-col w-full"
     >
       <div
-        class="w-full max-w-[1440px] place-content-center flex flex-col h-full self-center xl:px-32 px-4"
+        class="w-full xl:max-w-[1440px] place-content-center flex flex-col h-full self-center xl:px-32 px-4"
       >
-        <div class="flex flex-col xl:flex-row pt-52">
-          <div class="flex flex-col gap-6 w-full xl:w-1/3">
-            <h1 class="text-7xl font-bold">{{ tablaActual?.nombre }}</h1>
+        <div class="flex flex-col xl:flex-row xl:pt-52">
+          <div
+            class="flex flex-col gap-6 w-full xl:w-1/3 text-center xl:text-start"
+            data-aos="slide-right"
+            data-aos-once="true"
+          >
+            <h1 class="text-2xl xl:text-7xl font-bold">
+              {{ tablaActual?.nombre }}
+            </h1>
             <svg
+              class="!h-1 w-full xl:h-auto xl:w-auto"
               xmlns="http://www.w3.org/2000/svg"
               width="229.054"
               height="6.758"
@@ -24,9 +31,11 @@
               />
             </svg>
 
-            <span class="text-2xl">{{ tablaActual?.desc }}.</span>
+            <span class="text-2xl">{{ tablaActual?.desc }}</span>
           </div>
           <NuxtImg
+            data-aos="slide-left"
+            data-aos-once="true"
             class="xl:!w-2/3 w-full !h-auto"
             :src="'/img/Productos/Big/' + tablaActual?.imagen + '.png'"
           ></NuxtImg>
@@ -34,7 +43,7 @@
       </div>
     </div>
     <div
-      class="w-full max-w-[1440px] place-content-center flex flex-col h-full self-center py-20 xl:px-32 px-4 gap-28"
+      class="w-full xl:max-w-[1440px] place-content-center flex flex-col h-full self-center py-20 xl:px-32 px-4 gap-28"
     >
       <div class="flex flex-col gap-2">
         <div v-if="tablaActual" class="grid grid-cols-1 gap-6">
@@ -47,7 +56,7 @@
                   <th
                     v-for="(header, index) in tablaActual.headers"
                     :key="index"
-                    class="text-left text-tertiary text-2xl py-3 pl-6"
+                    class="text-left text-tertiary xl:text-2xl py-3 pl-2 xl:pl-6"
                   >
                     {{ header }}
                   </th>
@@ -55,6 +64,8 @@
               </thead>
               <tbody>
                 <tr
+                  data-aos="fade-up"
+                  data-aos-once="true"
                   v-for="(fila, indexFila) in tablaActual.datos"
                   :key="indexFila"
                   style="
@@ -71,7 +82,7 @@
                   <td
                     v-for="(valor, indexValor) in fila"
                     :key="indexValor"
-                    class="text-3xl py-3 pl-6"
+                    class="xl:text-3xl py-3 pl-2 xl:pl-6"
                     :class="{
                       'rounded-l-xl': indexValor === 0,
                       'rounded-r-xl': indexValor === fila.length - 1,
@@ -84,10 +95,17 @@
             </table>
           </div>
         </div>
-        <div v-if="tablaActual?.extra" class="text-xl pl-6">{{ tablaActual.extra }}</div>
+        <div
+          v-if="tablaActual?.extra"
+          class="text-center xl:text-start xl:text-xl pl-6"
+          data-aos="fade-up"
+          data-aos-once="true"
+        >
+          {{ tablaActual.extra }}
+        </div>
       </div>
 
-      <div class="flex flex-row justify-center gap-12">
+      <div class="flex flex-col xl:flex-row justify-center gap-4 xl:gap-12">
         <VButton titulo="Descargar el catálogo"></VButton>
         <VButton class="bg-white text-secondary" titulo="Descargar el manual">
         </VButton>
@@ -111,7 +129,7 @@ const tablas = ref([
     nombre: "Acoplado",
     desc: "Una de las unidades más pedidas por el mercado argentino. Ideal para el transporte de cargas paletizadas, cargas secas, granos y general.",
     extra: "*Color carrocería a elección.",
-    headers: ["Disposición de ejes", "Ejes", "Largo", "Tractor"],
+    headers: ["Disp. de ejes", "Ejes", "Largo", "Tractor"],
     datos: [
       ["2+1", "3", "9.40 mts", "4x2"],
       ["2+1", "3", "9.60 mts", "4x2"],
@@ -126,7 +144,7 @@ const tablas = ref([
     nombre: "Semirremolque carga seca",
     desc: "Ideal para el transporte de cargas paletizadas, cargas secas y general. Ejes Suspensys, pata de apoyo Jost e instalación eléctrica de 24V LED.",
     extra: "*Color carrocería a elección.",
-    headers: ["Disposición de ejes", "Largo", "Tractor", "PBTC"],
+    headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "13.50mts", "4x2", "45tn"],
       ["2+1", "14.50mts", "4x2", "45tn"],
@@ -145,7 +163,7 @@ const tablas = ref([
     nombre: "Batea",
     desc: "Ideal para el transporte de arena, granos, fertilizantes, ripio, minerales y otros productos a granel.",
     extra: "*Color de lona a elección.",
-    headers: ["Disposición de ejes", "Largo", "Tractor", "PBTC"],
+    headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "25m³", "4x2", "45tn"],
       ["2+1", "35m³", "6x2", "52.5tn"],
@@ -161,7 +179,7 @@ const tablas = ref([
     imagen: "sider",
     nombre: "Sider",
     desc: "Unidad destinada al transporte de cargas paletizadas. Ejes suspensys, pata de apoyo jost, piso antideslizante, easy lock y central lock.",
-    headers: ["Disposición de ejes", "Largo", "Tractor", "PBTC"],
+    headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "14.60mts", "4x2", "45tn"],
       ["2+1", "14.60mts", "6x2", "52.5tn"],
@@ -174,7 +192,7 @@ const tablas = ref([
     imagen: "furgonfrig",
     nombre: "Furgón Frigorífico",
     desc: "Unidad destinada al transporte de cargas refrigeradas. Mayor aislamiento, menor consumo, más vida útil del producto. Alta tecnología en inyección de poliuretano.",
-    headers: ["Disposición de ejes", "Largo", "Tractor", "PBTC"],
+    headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "14.70mts", "4x2", "45tn"],
       ["2+1", "14.70mts", "6x2", "52.5tn"],
@@ -186,7 +204,7 @@ const tablas = ref([
     imagen: "furgonpaq",
     nombre: "Furgón Paquetero",
     desc: "Unidad destinada al transporte de cargas paletizadas. Mayor capacidad de carga, más vida útil del producto. Alta tecnología en materiales.",
-    headers: ["Disposición de ejes", "Largo", "Tractor", "PBTC"],
+    headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "15.45mts", "4x2", "45tn"],
       ["2+1", "15.45mts", "6x2", "45tn"],
@@ -198,7 +216,7 @@ const tablas = ref([
     imagen: "tanque",
     nombre: "Tanque",
     desc: "Transporta diversas cargas con la mayor seguridad y calidad del mercado. Un tanque para cada necesidad.",
-    headers: ["Material", "Disposición de ejes", "Cisternas", "Capacidad"],
+    headers: ["Material", "Disp. de ejes", "Cisternas", "Capacidad"],
     datos: [
       ["Acero al carbón", "1+1", "1", "35m³"],
       ["Acero al carbón", "3 ejes juntos", "7", "43m³"],
@@ -209,7 +227,7 @@ const tablas = ref([
     imagen: "silo",
     nombre: "Silo",
     desc: "Para el transporte de cemento, cal, cenizas, talco industrial, harina y otros materiales que utilizan sistema de descarga por presurización.",
-    headers: ["Disposición de ejes", "Capacidad", "PBTC"],
+    headers: ["Disp. de ejes", "Capacidad", "PBTC"],
     datos: [
       ["2+1", "30m³", "52.5tn"],
       ["3 ejes juntos", "36m³", "52tn"],
@@ -221,7 +239,7 @@ const tablas = ref([
     imagen: "carreton",
     nombre: "Carretón",
     desc: "Adecuado para el transporte de grandes máquinas para la industria metalmecánica y minera, cosechadoras de caña de azúcar, cosechadoras de granos, transformadores de alta tensión, turbinas, entre otros.",
-    headers: ["Disposición de ejes", "Cuello", "Rampa trasera", "PBTC"],
+    headers: ["Disp. de ejes", "Cuello", "Rampa trasera", "PBTC"],
     datos: [
       ["3 ejes juntos", "Fijo", "A elección", "45tn"],
       ["3 ejes juntos", "Desmontable", "A elección", "45tn"],

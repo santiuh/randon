@@ -11,7 +11,7 @@
     }"
   >
     <div
-      class="flex flex-row justify-between py-7 px-10 self-center w-full max-w-[1440px]"
+      class="flex flex-row justify-between py-7 px-10 self-center w-full xl:max-w-[1440px]"
     >
       <NuxtImg
         @click="router.push('/')"

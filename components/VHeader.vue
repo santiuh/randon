@@ -17,6 +17,7 @@
           >INICIO</NuxtLink
         >
         <NuxtLink
+          :class="route.fullPath.includes('productos') ? 'text-secondary' : ''"
           active-class="text-secondary"
           to="/productos"
           class="hover:text-[#dae7ff] transition-all duration-300 active:scale-95 hover:scale-105"
@@ -46,4 +47,5 @@
 </template>
 <script setup>
 const router = useRouter();
+const route = useRoute();
 </script>

@@ -1,47 +1,32 @@
 <template>
   <div class="flex w-full relative">
-    <NuxtImg src="/svg/bgsec2.svg" class="!w-full !h-auto"></NuxtImg>
+    <NuxtImg
+      src="/svg/bgsec2.svg"
+      class="hidden xl:flex !w-full !h-auto"
+    ></NuxtImg>
+    <div
+      class="flex xl:hidden bg-[url('/img/bgsec2.png')] bg-cover bg-center bg-no-repeat h-[70vh] w-full"
+    ></div>
     <div class="absolute flex flex-col w-full h-full">
-      <div class="h-1/2 flex flex-col max-w-[1440px] self-center w-full  justify-end gap-2">
-        <div class="flex flex-col text-4xl font-black text-black">
-          <span>¿BUSCÁS UN</span>
-          <span>CONCESIONARIO?</span>
+      <div
+        class="h-full xl:h-1/2 flex flex-col xl:max-w-[1440px] px-4 xl:px-0 self-center w-full justify-end gap-10 xl:gap-2"
+        data-aos="slide-right"
+        data-aos-once="true"
+      >
+        <div class="flex flex-col text-3xl xl:text-4xl font-black text-black">
+          <span class="[text-shadow:_0_5px_7px_rgb(0_0_0_/_35%)]"
+            >¿BUSCÁS UN</span
+          >
+          <span class="[text-shadow:_0_5px_7px_rgb(0_0_0_/_35%)]"
+            >CONCESIONARIO?</span
+          >
         </div>
         <VButton titulo="ENCONTRÁ UNO CERCA TUYO"></VButton>
       </div>
       <div class="h-1/2"></div>
     </div>
   </div>
-  <!-- <div class="flex place-content-center bg-tertiary">
-    <div class="flex flex-col pt-20 pb-44 relative w-full px-4 lg:px-10 max-w-[1440px]">
-      <h1 class="font-extrabold text-5xl text-[#1C2646] text-center">
-        Líneas de Productos
-      </h1>
-      <hr
-        class="w-32 rounded-full border-secondary self-center border-2 my-14"
-      />
-      <div class="flex flex-col lg:flex-row justify-center gap-10">
-        <Sec2Card
-          @click="router.push('/Productos')"
-          bg="img/Sec2Card1.png"
-          title="Automotriz"
-        ></Sec2Card>
-        <Sec2Card
-          @click="router.push('/Productos/Agricola')"
-          bg="img/Sec2Card2.png"
-          title="Agrícola"
-        ></Sec2Card>
-        <Sec2Card
-          @click="router.push('/Productos/Industrial')"
-          bg="img/Sec2Card3.png"
-          title="Industrial"
-        ></Sec2Card>
-      </div>
-      <HomeRodaPill></HomeRodaPill>
-    </div>
-  </div> -->
 </template>
 <script setup lang="ts">
-import Sec2Card from "./Sec2Card.vue";
 const router = useRouter();
 </script>

@@ -1,9 +1,11 @@
 <template>
-  <div class="flex relative w-full">
+  <div class="hidden xl:flex relative w-full">
     <NuxtImg class="w-full" src="/img/conoce.png"></NuxtImg>
     <div class="absolute top-[10%] w-full flex justify-center">
-      <VButton titulo="CONOCÉ NUESTROS PRODUCTOS"></VButton>
+      <VButton @click="router.push('/productos')" titulo="CONOCÉ NUESTROS PRODUCTOS"></VButton>
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+const router = useRouter()
+</script>
