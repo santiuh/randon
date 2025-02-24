@@ -4,12 +4,12 @@
       class="w-full bg-[url('/img/productosbg.png')] bg-cover bg-no-repeat justify-center flex"
     >
       <div
-        class="flex flex-row gap-1 italic font-bold text-4xl xl:text-6xl xl:max-w-[1440px] w-full xl:px-32 px-4 pt-24 pb-10 xl:py-20 items-center xl:items-baseline"
+        class="flex flex-row gap-1 italic font-bold text-4xl lg:text-6xl lg:max-w-[1440px] w-full lg:px-32 px-4 pt-24 pb-10 lg:py-20 items-center lg:items-baseline"
         data-aos="slide-right"
         data-aos-once="true"
       >
         <svg
-          class="xl:h-[40px] xl:w-[59px] h-10 w-10"
+          class="lg:h-[40px] lg:w-[59px] h-10 w-10"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 59.145 40.998"
         >
@@ -27,7 +27,7 @@
     </div>
     <div class="w-full bg-gray flex justify-center">
       <div
-        class="xl:max-w-[1440px] xl:px-32 px-4 py-24 gap-10 w-full grid xl:grid-cols-4 gap"
+        class="lg:max-w-[1440px] lg:px-32 px-4 py-24 gap-10 w-full grid lg:grid-cols-4 gap"
       >
         <ProductosProducto
           :img="producto.img"

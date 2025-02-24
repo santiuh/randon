@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex justify-center text-white">
     <nav
-      class="flex flex-col w-full xl:hidden fixed z-50 transition-all duration-300"
+      class="flex flex-col w-full lg:hidden fixed z-50 transition-all duration-300"
       :class="{
         '!bg-primary': menu,
         ' !bg-primary ': isScrolled && isHome,

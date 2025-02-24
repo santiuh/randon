@@ -4,19 +4,19 @@
       class="bg-[url('/img/Productos/fondo.png')] bg-no-repeat bg-cover h-screen flex flex-col w-full"
     >
       <div
-        class="w-full xl:max-w-[1440px] place-content-center flex flex-col h-full self-center xl:px-32 px-4"
+        class="w-full lg:max-w-[1440px] place-content-center flex flex-col h-full self-center lg:px-32 px-4"
       >
-        <div class="flex flex-col xl:flex-row xl:pt-52">
+        <div class="flex flex-col lg:flex-row lg:pt-52">
           <div
-            class="flex flex-col gap-6 w-full xl:w-1/3 text-center xl:text-start"
+            class="flex flex-col gap-6 w-full lg:w-1/3 text-center lg:text-start"
             data-aos="slide-right"
             data-aos-once="true"
           >
-            <h1 class="text-2xl xl:text-7xl font-bold">
+            <h1 class="text-2xl lg:text-7xl font-bold">
               {{ tablaActual?.nombre }}
             </h1>
             <svg
-              class="!h-1 w-full xl:h-auto xl:w-auto"
+              class="!h-1 w-full lg:h-auto lg:w-auto"
               xmlns="http://www.w3.org/2000/svg"
               width="229.054"
               height="6.758"
@@ -36,14 +36,14 @@
           <NuxtImg
             data-aos="slide-left"
             data-aos-once="true"
-            class="xl:!w-2/3 w-full !h-auto"
+            class="lg:!w-2/3 w-full !h-auto"
             :src="'/img/Productos/Big/' + tablaActual?.imagen + '.png'"
           ></NuxtImg>
         </div>
       </div>
     </div>
     <div
-      class="w-full xl:max-w-[1440px] place-content-center flex flex-col h-full self-center py-20 xl:px-32 px-4 gap-28"
+      class="w-full lg:max-w-[1440px] place-content-center flex flex-col h-full self-center py-20 lg:px-32 px-4 gap-28"
     >
       <div class="flex flex-col gap-2">
         <div v-if="tablaActual" class="grid grid-cols-1 gap-6">
@@ -56,7 +56,7 @@
                   <th
                     v-for="(header, index) in tablaActual.headers"
                     :key="index"
-                    class="text-left text-tertiary xl:text-2xl py-3 pl-2 xl:pl-6"
+                    class="text-left text-tertiary lg:text-2xl py-3 pl-2 lg:pl-6"
                   >
                     {{ header }}
                   </th>
@@ -82,7 +82,7 @@
                   <td
                     v-for="(valor, indexValor) in fila"
                     :key="indexValor"
-                    class="xl:text-3xl py-3 pl-2 xl:pl-6"
+                    class="lg:text-3xl py-3 pl-2 lg:pl-6"
                     :class="{
                       'rounded-l-xl': indexValor === 0,
                       'rounded-r-xl': indexValor === fila.length - 1,
@@ -97,7 +97,7 @@
         </div>
         <div
           v-if="tablaActual?.extra"
-          class="text-center xl:text-start xl:text-xl pl-6"
+          class="text-center lg:text-start lg:text-xl pl-6"
           data-aos="fade-up"
           data-aos-once="true"
         >
@@ -105,7 +105,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col xl:flex-row justify-center gap-4 xl:gap-12">
+      <div class="flex flex-col lg:flex-row justify-center gap-4 lg:gap-12">
         <VButton titulo="Descargar el catálogo"></VButton>
         <VButton class="bg-white text-secondary" titulo="Descargar el manual">
         </VButton>

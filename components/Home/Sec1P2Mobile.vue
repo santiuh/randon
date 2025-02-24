@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex xl:hidden relative w-full h-[50vh] bg-[url('/img/conoce.png')] bg-cover bg-center bg-no-repeat px-4"
+    class="flex lg:hidden relative w-full h-[50vh] bg-[url('/img/conoce.png')] bg-cover bg-center bg-no-repeat px-4"
   >
     <VButton
       @click="router.push('/productos')"

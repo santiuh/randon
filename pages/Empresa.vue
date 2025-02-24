@@ -4,12 +4,12 @@
       class="w-full bg-[url('/img/empresabg.png')] bg-cover bg-no-repeat justify-center flex"
     >
       <div
-        class="flex flex-row gap-1 italic font-bold text-3xl xl:text-6xl xl:max-w-[1440px] w-full xl:px-32 px-2 pt-24 pb-10 xl:py-20 items-center xl:items-baseline"
+        class="flex flex-row gap-1 italic font-bold text-3xl lg:text-6xl lg:max-w-[1440px] w-full lg:px-32 px-2 pt-24 pb-10 lg:py-20 items-center lg:items-baseline"
         data-aos="slide-right"
         data-aos-once="true"
       >
         <svg
-          class="xl:h-[40px] xl:w-[59px] h-10 w-10"
+          class="lg:h-[40px] lg:w-[59px] h-10 w-10"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 59.145 40.998"
         >
@@ -27,18 +27,18 @@
     </div>
     <div class="flex flex-col relative w-full bg-primary items-center">
       <div
-        class="flex flex-col xl:max-w-[1440px] w-full xl:px-32 px-4 gap-20 z-10 py-16 text-xl"
+        class="flex flex-col lg:max-w-[1440px] w-full lg:px-32 px-4 gap-20 z-10 py-16 text-xl"
       >
         <div
-          class="flex flex-col-reverse xl:flex-row justify-between w-full items-center xl:px-16 px-6 py-6 xl:py-10 rounded-[36px] drop-shadow-2xl shadow-2xl bg-primary border-[#202020] border gap-7"
+          class="flex flex-col-reverse lg:flex-row justify-between w-full items-center lg:px-16 px-6 py-6 lg:py-10 rounded-[36px] drop-shadow-2xl shadow-2xl bg-primary border-[#202020] border gap-7"
           data-aos="slide-right"
           data-aos-once="true"
         >
           <div
-            class="flex flex-col gap-4 w-full text-justify xl:text-start xl:w-2/3"
+            class="flex flex-col gap-4 w-full text-justify lg:text-start lg:w-2/3"
           >
             <p>
-              Somos <span class="font-bold xl:text-2xl">Randon Argentina</span>,
+              Somos <span class="font-bold lg:text-2xl">Randon Argentina</span>,
               líderes en el mercado de acoplados y semirremolques.
             </p>
             <p>
@@ -50,23 +50,23 @@
             </p>
           </div>
           <NuxtImg
-            class="rounded-xl w-full xl:w-1/3"
+            class="rounded-xl w-full lg:w-1/3"
             src="/img/sobrenos1.png"
           ></NuxtImg>
         </div>
         <div
-          class="flex flex-col xl:flex-row justify-between w-full items-center xl:px-16 px-6 py-6 xl:py-10 rounded-[36px] drop-shadow-2xl shadow-2xl bg-primary border-[#202020] border gap-7"
+          class="flex flex-col lg:flex-row justify-between w-full items-center lg:px-16 px-6 py-6 lg:py-10 rounded-[36px] drop-shadow-2xl shadow-2xl bg-primary border-[#202020] border gap-7"
           data-aos="slide-left"
           data-aos-once="true"
         >
           <NuxtImg
-            class="rounded-xl w-full xl:w-1/3"
+            class="rounded-xl w-full lg:w-1/3"
             src="/img/sobrenos2.png"
           ></NuxtImg>
           <div
-            class="flex flex-col gap-4 w-full text-justify xl:text-start xl:w-2/3"
+            class="flex flex-col gap-4 w-full text-justify lg:text-start lg:w-2/3"
           >
-            <p class="font-bold xl:text-2xl">Innovación y producción</p>
+            <p class="font-bold lg:text-2xl">Innovación y producción</p>
             <p>
               Contamos con más de 130 empleados y trabajamos en innovaciones
               constantes, abriendo nuevas líneas de producción e incorporando
@@ -81,14 +81,14 @@
           </div>
         </div>
         <div
-          class="flex flex-col-reverse xl:flex-row justify-between w-full items-center xl:px-16 px-6 py-6 xl:py-10 rounded-[36px] drop-shadow-2xl shadow-2xl bg-primary border-[#202020] border gap-7"
+          class="flex flex-col-reverse lg:flex-row justify-between w-full items-center lg:px-16 px-6 py-6 lg:py-10 rounded-[36px] drop-shadow-2xl shadow-2xl bg-primary border-[#202020] border gap-7"
           data-aos="slide-right"
           data-aos-once="true"
         >
           <div
-            class="flex flex-col gap-4 w-full text-justify xl:text-start xl:w-2/3"
+            class="flex flex-col gap-4 w-full text-justify lg:text-start lg:w-2/3"
           >
-            <p class="font-bold xl:text-2xl">
+            <p class="font-bold lg:text-2xl">
               Presencia nacional e internacional
             </p>
             <p>
@@ -102,7 +102,7 @@
             </p>
           </div>
           <NuxtImg
-            class="rounded-xl w-full xl:w-1/3"
+            class="rounded-xl w-full lg:w-1/3"
             src="/img/sobrenos3.png"
           ></NuxtImg>
         </div>
@@ -112,17 +112,17 @@
         <svgo-sobrenos1
           data-aos="slide-left"
           data-aos-once="true"
-          class="!h-auto !w-full xl:!w-auto xl:!h-96 xl:self-end"
+          class="!h-auto !w-full lg:!w-auto lg:!h-96 lg:self-end"
         ></svgo-sobrenos1>
         <svgo-sobrenos1
           data-aos="slide-right"
           data-aos-once="true"
-          class="!h-auto !w-full xl:!w-auto xl:!h-96 xl:self-start"
+          class="!h-auto !w-full lg:!w-auto lg:!h-96 lg:self-start"
         ></svgo-sobrenos1>
         <svgo-sobrenos3
           data-aos="slide-left"
           data-aos-once="true"
-          class="!h-auto !w-full xl:!w-auto xl:!h-96 text-secondary xl:self-end"
+          class="!h-auto !w-full lg:!w-auto lg:!h-96 text-secondary lg:self-end"
         ></svgo-sobrenos3>
       </div>
     </div>
@@ -130,15 +130,15 @@
       class="flex flex-col w-full py-24 bg-primary items-center drop-shadow-2xl shadow-2xl"
     >
       <div
-        class="flex flex-col xl:max-w-[1440px] w-full xl:px-32 px-4 z-10 xl:py-16 text-xl text-center xl:text-justify [text-shadow:_0_10px_7px_rgb(0_0_0_/_100%)]"
+        class="flex flex-col lg:max-w-[1440px] w-full lg:px-32 px-4 z-10 lg:py-16 text-xl text-center lg:text-justify [text-shadow:_0_10px_7px_rgb(0_0_0_/_100%)]"
         data-aos="fade-up"
         data-aos-once="true"
       >
         <span class="text-5xl font-bold text-center">VALORES</span>
         <div
-          class="flex flex-col xl:flex-row justify-around w-full text-2xl pt-20 pb-36"
+          class="flex flex-col lg:flex-row justify-around w-full text-2xl pt-20 pb-36"
         >
-          <div class="flex flex-col xl:w-1/3 gap-16">
+          <div class="flex flex-col lg:w-1/3 gap-16">
             <div class="flex flex-col">
               <p class="font-bold">Seguridad y calidad:</p>
               <span>Son innegociables en todas las acciones y productos. </span>
@@ -157,7 +157,7 @@
               </span>
             </div>
           </div>
-          <div class="flex flex-col xl:w-1/3 gap-16">
+          <div class="flex flex-col lg:w-1/3 gap-16">
             <div class="flex flex-col">
               <p class="font-bold">Ganancias con sostenibilidad:</p>
               <span
@@ -181,7 +181,7 @@
           </div>
         </div>
         <span
-          class="text-4xl xl:text-7xl italic font-bold text-center text-tertiary"
+          class="text-4xl lg:text-7xl italic font-bold text-center text-tertiary"
           data-aos="slide-right"
           data-aos-once="true"
           >SOLO INNOVA QUIEN SE MUEVE</span

@@ -1,9 +1,9 @@
 <template>
   <div
-    class="hidden xl:flex w-full justify-center bg-primary text-white pt-9 pb-8"
+    class="hidden lg:flex w-full justify-center bg-primary text-white pt-9 pb-8"
   >
     <div
-      class="max-w-[1400px] flex flex-row justify-between w-full items-center xl:px-32 px-4"
+      class="max-w-[1400px] flex flex-row justify-between w-full items-center lg:px-32 px-4"
     >
       <svgo-logo
         class="!h-12 !w-auto hover:cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300"

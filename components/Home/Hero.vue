@@ -3,10 +3,10 @@
     class="flex relative justify-center w-full h-[85vh] bg-[url('/img/home.png')] bg-no-repeat bg-cover bg-center"
   >
     <div
-      class="xl:max-w-[1440px] flex flex-col xl:pt-20 h-full absolute top-[20%] xl:static w-full xl:justify-start z-10 xl:px-32 px-4"
+      class="lg:max-w-[1440px] flex flex-col lg:pt-20 h-full absolute top-[20%] lg:static w-full lg:justify-start z-10 lg:px-32 px-4"
     >
       <div
-        class="flex flex-col flex-wrap italic text-5xl xl:text-7xl font-bold text-white"
+        class="flex flex-col flex-wrap italic text-5xl lg:text-7xl font-bold text-white"
       >
         <p
           data-aos="slide-right"
@@ -40,7 +40,7 @@
     </svg>
     <svg
       data-aos="slide-left"
-      class="flex absolute right-0 bottom-0 w-2/3 h-auto xl:w-[525px] xl:h-[318px]"
+      class="flex absolute right-0 bottom-0 w-2/3 h-auto lg:w-[525px] lg:h-[318px]"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 525.964 318.709"

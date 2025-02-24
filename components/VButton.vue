@@ -1,10 +1,10 @@
 <template>
   <button
-    class="text-base shadow-2xl drop-shadow-2xl h-fit justify-center lg:justify-start lg:text-3xl flex flex-row items-center lg:items-baseline gap-3 bg-tertiary px-5  rounded-xl py-4 w-full lg:w-fit hover:scale-105 brig transition-all"
+    class="text-base shadow-2xl drop-shadow-2xl h-fit justify-center lg:justify-start lg:text-3xl flex flex-row items-center lg:items-baseline gap-3 bg-tertiary px-5 rounded-xl py-4 w-full lg:w-fit hover:scale-105 brig transition-all"
   >
     <p>{{ titulo }}</p>
     <svg
-      class="w-2 h-auto xl:h-[19px] xl:w-[10px]"
+      class="w-2 h-auto lg:h-[19px] lg:w-[10px]"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 10.019 19.344"
     >

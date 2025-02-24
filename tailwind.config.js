@@ -20,6 +20,9 @@ module.exports = {
         raleway: ["Raleway", "sans-serif"],
       },
     },
+    screens: {
+      lg: "1080px",
+    },
   },
   plugins: [],
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center">
     <div
-      class="text-primary flex flex-row py-10 justify-between w-full xl:max-w-[1440px]"
+      class="text-primary flex flex-row py-10 justify-between w-full lg:max-w-[1440px]"
     >
       <NuxtImg
         @click="router.push('/')"

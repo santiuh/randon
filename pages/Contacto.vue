@@ -4,12 +4,12 @@
       class="w-full bg-[url('/img/contacto.png')] bg-cover bg-no-repeat justify-center flex"
     >
       <div
-        class="flex flex-row gap-1 italic font-bold text-2xl xl:text-6xl xl:max-w-[1440px] w-full xl:px-32 px-4 pt-24 pb-10 xl:py-20 items-center xl:items-baseline"
+        class="flex flex-row gap-1 italic font-bold text-2xl lg:text-6xl lg:max-w-[1440px] w-full lg:px-32 px-4 pt-24 pb-10 lg:py-20 items-center lg:items-baseline"
         data-aos="slide-right"
         data-aos-once="true"
       >
         <svg
-          class="xl:h-[40px] xl:w-[59px] h-10 w-10"
+          class="lg:h-[40px] lg:w-[59px] h-10 w-10"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 59.145 40.998"
         >
@@ -23,21 +23,21 @@
         </svg>
         <div class="flex flex-col">
           <h1>Estamos para ayudarte</h1>
-          <h1 class="hidden xl:flex">con tus inquietudes</h1>
+          <h1 class="hidden lg:flex">con tus inquietudes</h1>
         </div>
       </div>
     </div>
     <div class="flex flex-col items-center bg-gray w-full">
       <div
-        class="flex flex-col text-center text-black xl:max-w-[1440px] w-full xl:px-32 px-4 py-28 gap-14 self-center"
+        class="flex flex-col text-center text-black lg:max-w-[1440px] w-full lg:px-32 px-4 py-28 gap-14 self-center"
       >
         <h1 class="text-6xl font-bold">Medios de contacto</h1>
         <div
-          class="flex flex-col xl:flex-row gap-10 xl:gap-0 justify-around text-2xl"
+          class="flex flex-col lg:flex-row gap-10 lg:gap-0 justify-around text-2xl"
         >
           <div class="flex flex-col">
             <svgo-contacto1 class="!h-16 !w-auto"></svgo-contacto1>
-            <span class="font-bold xl:mt-8 mt-4"
+            <span class="font-bold lg:mt-8 mt-4"
               >Talleres oficiales y postventa
             </span>
             <span>postventa@randon.com.ar </span>
@@ -45,7 +45,7 @@
           </div>
           <div class="flex flex-col">
             <svgo-contacto2 class="!h-16 !w-auto"></svgo-contacto2>
-            <span class="font-bold xl:mt-8 mt-4"
+            <span class="font-bold lg:mt-8 mt-4"
               >Talleres oficiales y postventa
             </span>
             <span>postventa@randon.com.ar </span>
@@ -53,7 +53,7 @@
           </div>
           <div class="flex flex-col">
             <svgo-contacto3 class="!h-16 !w-auto"></svgo-contacto3>
-            <span class="font-bold xl:mt-8 mt-4"
+            <span class="font-bold lg:mt-8 mt-4"
               >Talleres oficiales y postventa
             </span>
             <span>postventa@randon.com.ar </span>
@@ -62,9 +62,9 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col xl:flex-row w-full">
+    <div class="flex flex-col lg:flex-row w-full">
       <div
-        class="xl:w-1/2 bg-[url('/img/contacto2.png')] bg-cover bg-no-repeat flex justify-end py-10 px-4 xl:px-0"
+        class="lg:w-1/2 bg-[url('/img/contacto2.png')] bg-cover bg-no-repeat flex justify-center lg:justify-end py-10 px-4"
       >
         <div
           class="flex flex-col w-full max-w-[720px] gap-3 justify-center"
@@ -89,9 +89,9 @@
           </NuxtLink>
         </div>
       </div>
-      <div class="xl:w-1/2 flex justify-start bg-secondary">
+      <div class="lg:w-1/2 flex justify-center lg:justify-start bg-secondary">
         <div
-          class="flex flex-col w-full max-w-[720px] py-24 xl:!pl-12 px-4 xl:px-0 gap-4"
+          class="flex flex-col w-full max-w-[720px] py-24 lg:!pl-12 px-4  gap-4"
         >
           <div class="flex flex-col text-2xl">
             <p class="font-bold">¿QUERÉS SABER MÁS?</p>
@@ -103,14 +103,14 @@
               placeholder="Nombre y Apellido"
               type="text"
             />
-            <div class="flex flex-col xl:flex-row gap-3">
+            <div class="flex w-full flex-col lg:flex-row gap-3">
               <input
-                class="bg-primary text-white border-white border rounded-md text-lg px-3 py-2"
+                class="bg-primary text-white border-white border rounded-md text-lg px-3 py-2 w-full"
                 placeholder="Correo electrónico"
                 type="text"
               />
               <input
-                class="bg-primary text-white border-white border rounded-md text-lg px-3 py-2"
+                class="bg-primary text-white border-white border rounded-md text-lg px-3 py-2 w-full"
                 placeholder="Teléfono"
                 type="tel"
               />
