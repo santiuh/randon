@@ -4,7 +4,7 @@
       class="w-full bg-[url('/img/empresabg.png')] bg-cover bg-no-repeat justify-center flex"
     >
       <div
-        class="flex flex-row gap-1 italic font-bold text-6xl max-w-[1440px] w-full px-32 py-28 items-baseline"
+        class="flex flex-row gap-1 italic font-bold text-6xl max-w-[1440px] w-full xl:px-32 px-4 py-28 items-baseline"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,10 +26,10 @@
     </div>
     <div class="flex flex-col relative w-full bg-primary items-center">
       <div
-        class="flex flex-col max-w-[1440px] w-full px-32 gap-20 z-10 py-16 text-xl"
+        class="flex flex-col max-w-[1440px] w-full xl:px-32 px-4 gap-20 z-10 py-16 text-xl"
       >
         <div
-          class="flex flex-row justify-between w-full items-center px-16 py-10 rounded-[36px] shadow-xl bg-primary border-[#202020] border gap-7"
+          class="flex flex-row justify-between w-full items-center px-16 py-10 rounded-[36px] drop-shadow-2xl shadow-2xl bg-primary border-[#202020] border gap-7"
         >
           <div class="flex flex-col gap-4 w-2/3">
             <p>
@@ -66,7 +66,7 @@
           </div>
         </div>
         <div
-          class="flex flex-row justify-between w-full px-16 py-10 rounded-[36px] shadow-2xl bg-primary border-[#202020] border gap-7"
+          class="flex flex-row justify-between w-full px-16 py-10 rounded-[36px] drop-shadow-2xl shadow-2xl bg-primary border-[#202020] border gap-7"
         >
           <div class="flex flex-col gap-4 w-2/3">
             <p class="font-bold text-2xl">Presencia nacional e internacional</p>
@@ -156,8 +156,12 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col w-full py-24 bg-primary items-center">
-      <div class="flex flex-col max-w-[1440px] w-full px-32 z-10 py-16 text-xl">
+    <div
+      class="flex flex-col w-full py-24 bg-primary items-center drop-shadow-2xl shadow-2xl"
+    >
+      <div
+        class="flex flex-col max-w-[1440px] w-full xl:px-32 px-4 z-10 py-16 text-xl"
+      >
         <span class="text-5xl font-bold text-center">VALORES</span>
         <div
           class="flex flex-row justify-around w-full text-2xl text-justify pt-20 pb-36"

@@ -4,7 +4,7 @@
       class="w-full bg-[url('/img/productosbg.png')] bg-cover bg-no-repeat justify-center flex"
     >
       <div
-        class="flex flex-row gap-1 italic font-bold text-6xl max-w-[1440px] w-full px-32 py-28 items-baseline"
+        class="flex flex-row gap-1 italic font-bold text-6xl max-w-[1440px] w-full xl:px-32 px-4 py-28 items-baseline"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,25 +26,27 @@
     </div>
     <div class="w-full bg-gray flex justify-center">
       <div
-        class="max-w-[1440px] px-32 py-24 gap-10 w-full grid grid-cols-4 gap"
+        class="max-w-[1440px] xl:px-32 px-4 py-24 gap-10 w-full grid grid-cols-4 gap"
       >
         <ProductosProducto
           :img="producto.img"
           :texto="producto.texto"
-          v-for="producto in data"
+          v-for="(producto, i) in data"
+          @click="router.push('/Productos/' + (i + 1))"
         ></ProductosProducto>
       </div>
     </div>
   </div>
 </template>
 <script setup>
+const router = useRouter();
 const data = [
   { img: "acoplado.png", texto: "Acoplado" },
   { img: "semirremolque.png", texto: "Semirremolque carga seca" },
   { img: "batea.png", texto: "Batea" },
   { img: "sider.png", texto: "Sider" },
-  { img: "furgonpaq.png", texto: "Furgón paquetero" },
   { img: "furgonfrig.png", texto: "Furgón frigorífico" },
+  { img: "furgonpaq.png", texto: "Furgón paquetero" },
   { img: "tanque.png", texto: "Tanque" },
   { img: "silo.png", texto: "Silo" },
   { img: "carreton.png", texto: "Carretón" },

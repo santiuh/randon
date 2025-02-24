@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col shadow-xl rounded-lg overflow-hidden border-[#e4e4e4] bg-white border hover:scale-105 transition-all duration-300"
+    class="flex flex-col hover:cursor-pointer hover:brightness-95 active:scale-95 shadow-xl rounded-lg overflow-hidden border-[#e4e4e4] bg-white border hover:scale-105 transition-all duration-300"
   >
     <NuxtImg class="w-auto h-auto" :src="'img/Productos/' + img"></NuxtImg>
     <div class="text-xl font-bold p-8 text-black text-center">

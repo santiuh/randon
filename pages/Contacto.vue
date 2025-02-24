@@ -4,7 +4,7 @@
       class="w-full bg-[url('/img/contacto.png')] bg-cover bg-no-repeat justify-center flex"
     >
       <div
-        class="flex flex-row gap-1 italic font-bold text-6xl max-w-[1440px] w-full px-32 py-28 items-baseline"
+        class="flex flex-row gap-1 italic font-bold text-6xl max-w-[1440px] w-full xl:px-32 px-4 py-28 items-baseline"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@
     </div>
     <div class="flex flex-col items-center bg-gray w-full">
       <div
-        class="flex flex-col text-center text-black max-w-[1440px] w-full px-32 py-28 gap-14 self-center"
+        class="flex flex-col text-center text-black max-w-[1440px] w-full xl:px-32 px-4 py-28 gap-14 self-center"
       >
         <h1 class="text-6xl font-bold">Medios de contacto</h1>
         <div class="flex flex-row justify-around text-2xl">
@@ -57,8 +57,11 @@
       <div
         class="w-1/2 bg-[url('/img/contacto2.png')] bg-cover bg-no-repeat flex justify-end"
       >
-        <div class="flex flex-col  w-full max-w-[720px] gap-3 justify-center">
-          <NuxtImg src="/svg/point.svg" class="!h-24 !w-auto self-start"></NuxtImg>
+        <div class="flex flex-col w-full max-w-[720px] gap-3 justify-center">
+          <NuxtImg
+            src="/svg/point.svg"
+            class="!h-24 !w-auto self-start"
+          ></NuxtImg>
 
           <div class="text-3xl font-black">
             <p>ENCONTRÁ</p>

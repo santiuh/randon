@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="w-full flex justify-center xl:pt-[52px] xl:pb-[32px] text-white"
-    :class="route.path === '/contacto' ? 'absolute' : 'bg-primary'"
-  >
+  <div class="w-full flex justify-center text-white">
     <nav
       class="flex flex-col w-full xl:hidden fixed z-50 transition-all duration-300"
       :class="{
@@ -34,40 +31,45 @@
         class="flex flex-col font-semibold text-xl gap-4 pl-8 overflow-hidden transition-all"
       >
         <NuxtLink
+          active-class="text-secondary"
           @click="menu = false"
           class="hover:cursor-pointer transition-all duration-300"
           to="/"
         >
           INICIO
         </NuxtLink>
+
         <NuxtLink
+          active-class="text-secondary"
           @click="menu = false"
           class="hover:cursor-pointer transition-all duration-300"
-          to="/MARCAS"
-        >
-          MARCAS
-        </NuxtLink>
-        <NuxtLink
-          @click="menu = false"
-          class="hover:cursor-pointer transition-all duration-300"
-          to="/PRODUCTOS"
+          to="/producto"
         >
           PRODUCTOS
         </NuxtLink>
         <NuxtLink
+          active-class="text-secondary"
           @click="menu = false"
           class="hover:cursor-pointer transition-all duration-300"
-          to="/EMPRESA"
+          to="/empresa"
         >
           EMPRESA
         </NuxtLink>
         <NuxtLink
+          active-class="text-secondary"
           @click="menu = false"
           class="hover:cursor-pointer transition-all duration-300"
-          to="https://catalogo.rodaservice.com.ar/"
-          target="_blank"
+          to="/novedades"
         >
-          ACCESO CLIENTES
+          NOVEDADES
+        </NuxtLink>
+        <NuxtLink
+          active-class="text-secondary"
+          @click="menu = false"
+          class="hover:cursor-pointer transition-all duration-300"
+          to="/contacto"
+        >
+          CONTACT0
         </NuxtLink>
       </div>
     </nav>

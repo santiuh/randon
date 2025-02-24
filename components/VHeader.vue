@@ -1,17 +1,49 @@
 <template>
-  <div class="flex w-full justify-center bg-primary text-white pt-9 pb-8">
+  <div
+    class="hidden xl:flex w-full justify-center bg-primary text-white pt-9 pb-8"
+  >
     <div
-      class="max-w-[1400px] flex flex-row justify-between w-full items-center px-32"
+      class="max-w-[1400px] flex flex-row justify-between w-full items-center xl:px-32 px-4"
     >
-      <svgo-logo class="!h-12 !w-auto"></svgo-logo>
+      <svgo-logo
+        class="!h-12 !w-auto hover:cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300"
+        @click="router.push('/')"
+      ></svgo-logo>
       <div class="flex flex-row font-bold text-xl gap-3">
-        <NuxtLink to="/">INICIO</NuxtLink>
-        <NuxtLink to="/productos">PRODUCTOS</NuxtLink>
-        <NuxtLink to="/empresa">EMPRESA</NuxtLink>
-        <NuxtLink to="/">NOVEDADES</NuxtLink>
-        <NuxtLink to="/contacto">CONTACTO</NuxtLink>
+        <NuxtLink
+          class="hover:text-[#dae7ff] transition-all duration-300 active:scale-95 hover:scale-105"
+          active-class="text-secondary"
+          to="/"
+          >INICIO</NuxtLink
+        >
+        <NuxtLink
+          active-class="text-secondary"
+          to="/productos"
+          class="hover:text-[#dae7ff] transition-all duration-300 active:scale-95 hover:scale-105"
+          >PRODUCTOS</NuxtLink
+        >
+        <NuxtLink
+          active-class="text-secondary"
+          to="/empresa"
+          class="hover:text-[#dae7ff] transition-all duration-300 active:scale-95 hover:scale-105"
+          >EMPRESA</NuxtLink
+        >
+        <NuxtLink
+          active-class="text-secondary"
+          to="/novedades"
+          class="hover:text-[#dae7ff] transition-all duration-300 active:scale-95 hover:scale-105"
+          >NOVEDADES</NuxtLink
+        >
+        <NuxtLink
+          active-class="text-secondary"
+          to="/contacto"
+          class="hover:text-[#dae7ff] transition-all duration-300 active:scale-95 hover:scale-105"
+          >CONTACTO</NuxtLink
+        >
       </div>
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+const router = useRouter();
+</script>

@@ -3,7 +3,7 @@
     class="flex animate-gradient bg-gradient-to-l from-[#2E2E2E] to-[#000000] place-content-center pt-28 pb-20 z-40"
   >
     <div
-      class="flex-col lg:flex-row gap-6 lg:gap-0 items-center text-center lg:text-start flex text-xl lg:justify-around w-full max-w-[1440px] px-32"
+      class="flex-col lg:flex-row gap-6 lg:gap-0 items-center text-center lg:text-start flex text-xl lg:justify-around w-full max-w-[1440px] xl:px-32 px-4"
     >
       <NuxtImg class="!h-14 self-center" src="/svg/logo.svg"></NuxtImg>
       <div class="h-full border-l"></div>
@@ -20,19 +20,19 @@
       <div class="h-full border-l"></div>
       <div class="flex flex-row gap-4">
         <NuxtLink
-          to="https://www.instagram.com/rodaservice/"
+          to="https://api.whatsapp.com/send?phone=5493417484539"
           target="_blank"
           class="p-3 bg-[#222222] rounded-xl flex items-center"
           ><svgo-wsp class="!h-7 !w-7"></svgo-wsp
         ></NuxtLink>
         <NuxtLink
-          to="https://www.facebook.com/rodaservice/?locale=es_LA"
+          to="https://web.facebook.com/randonargentinaok"
           target="_blank"
           class="p-3 bg-[#222222] rounded-xl flex items-center"
           ><svgo-li class="!h-7 !w-7"></svgo-li
         ></NuxtLink>
         <NuxtLink
-          to="https://www.linkedin.com/company/86398638/admin/page-posts/published/"
+          to="https://www.instagram.com/rodaservice/"
           target="_blank"
           class="p-3 bg-[#222222] rounded-xl flex items-center"
           ><svgo-ig class="!h-7 !w-7"></svgo-ig
@@ -43,6 +43,6 @@
 </template>
 <script setup>
 const openWindow = () => {
-  window.open("https://api.whatsapp.com/send?phone=5493415709283", "_blank");
+  window.open("https://api.whatsapp.com/send?phone=5493417484539", "_blank");
 };
 </script>

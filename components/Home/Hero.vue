@@ -3,7 +3,7 @@
     class="flex relative justify-center w-full h-[85vh] bg-[url('/img/home.png')] bg-no-repeat bg-cover bg-center"
   >
     <div
-      class="max-w-[1440px] flex flex-col pt-20 w-full justify-start z-10 px-32"
+      class="max-w-[1440px] flex flex-col pt-20 w-full justify-start z-10 lg:xl:px-32 px-4"
     >
       <div
         class="flex flex-col italic text-7xl font-bold text-white drop-shadow-2xl"
@@ -13,7 +13,7 @@
       </div>
     </div>
     <svg
-      class="flex absolute left-0"
+      class="flex absolute left-0 h-10 lg:w-auto lg:h-auto"
       xmlns="http://www.w3.org/2000/svg"
       width="492.069"
       height="710.467"
