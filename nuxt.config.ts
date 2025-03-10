@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/image",
     "nuxt-svgo",
+    "@nuxtjs/leaflet",
     [
       "@nuxtjs/google-fonts",
       {

@@ -81,17 +81,14 @@
             <p>UN CONCESIONARIO</p>
             <p>CERCA TUYO</p>
           </div>
-          <NuxtLink
-            to="https://www.google.com/maps/search/Randon+Argentina"
-            target="_blank"
-          >
+          <NuxtLink to="/Concesionarios">
             <VButton titulo="VER CONCESIONARIOS"></VButton>
           </NuxtLink>
         </div>
       </div>
       <div class="lg:w-1/2 flex justify-center lg:justify-start bg-secondary">
         <div
-          class="flex flex-col w-full max-w-[720px] py-24 lg:!pl-12 px-4  gap-4"
+          class="flex flex-col w-full max-w-[720px] py-24 lg:!pl-12 px-4 gap-4"
         >
           <div class="flex flex-col text-2xl">
             <p class="font-bold">¿QUERÉS SABER MÁS?</p>

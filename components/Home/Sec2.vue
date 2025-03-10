@@ -21,7 +21,10 @@
             >CONCESIONARIO?</span
           >
         </div>
-        <VButton titulo="ENCONTRÁ UNO CERCA TUYO"></VButton>
+        <VButton
+          titulo="ENCONTRÁ UNO CERCA TUYO"
+          @click="navigateToConcesionarios"
+        ></VButton>
       </div>
       <div class="h-1/2"></div>
     </div>
@@ -29,4 +32,8 @@
 </template>
 <script setup lang="ts">
 const router = useRouter();
+
+function navigateToConcesionarios() {
+  router.push("/concesionarios");
+}
 </script>

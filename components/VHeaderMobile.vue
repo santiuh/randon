@@ -27,7 +27,7 @@
         ></svgo-menu>
       </div>
       <div
-        :class="menu ? 'h-56' : 'h-0'"
+        :class="menu ? 'h-64' : 'h-0'"
         class="flex flex-col font-semibold text-xl gap-4 pl-8 overflow-hidden transition-all"
       >
         <NuxtLink
@@ -69,7 +69,15 @@
           class="hover:cursor-pointer transition-all duration-300"
           to="/contacto"
         >
-          CONTACT0
+          CONTACTO
+        </NuxtLink>
+        <NuxtLink
+          active-class="text-secondary"
+          @click="menu = false"
+          class="hover:cursor-pointer transition-all duration-300"
+          to="/Concesionarios"
+        >
+          CONCESIONARIOS
         </NuxtLink>
       </div>
     </nav>
