@@ -1,5 +1,11 @@
 // nuxt.config.ts
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      IG_TOKEN: process.env.IG_TOKEN,
+      IG_ID: process.env.IG_ID,
+    },
+  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },

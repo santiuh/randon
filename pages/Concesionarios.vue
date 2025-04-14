@@ -1,19 +1,209 @@
 <template>
-  <div class="flex relative w-full">
+  <div class="w-full bg-gray flex justify-center !text-primary py-16 px-4">
     <div
-      class="flex w-full absolute justify-center top-3 rounded-3xl px-3 py-2 text-white"
+      class="shadow rounded-xl bg-[#e0e1e2] px-8 py-4 flex w-full lg:max-w-[1440px]"
     >
-      <h2
-        class="text-3xl shadow-2xl top-12 flex hover:scale-105 text-center z-50 font-bold leading-tight bg-primary rounded-full px-7 py-3"
-        data-aos="fade-up"
-        data-aos-once="true"
-        data-aos-delay="400"
+      <table
+        class="min-w-full text-sm text-left text-gray-700 border-separate border-spacing-y-2"
       >
-        CONCESIONARIOS RANDON
-      </h2>
+        <thead class="bg-gray-100 text-secondary text-gray-700">
+          <tr>
+            <th class="py-2 pl-4">Concesionario</th>
+            <th class="py-2">Localidad</th>
+            <th class="py-2">Provincia</th>
+            <th class="py-2">Dirección</th>
+            <th class="py-2">Teléfonos</th>
+            <th class="py-2">Mail</th>
+            <th class="py-2">Web</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(entry, i) in rawData" :key="i" class="bg-[#cccdce]">
+            <td class="pl-4 font-bold rounded-l-xl">
+              {{ entry.concesionario }}
+            </td>
+            <td class="py-2">
+              <ul>
+                <li
+                  class="py-1"
+                  v-for="(localidad, idx) in entry.localidad"
+                  :key="idx"
+                >
+                  {{ localidad }}
+                </li>
+              </ul>
+            </td>
+            <td class="py-2">
+              <ul>
+                <li
+                  class="py-1"
+                  v-for="(provincia, idx) in entry.provincia"
+                  :key="idx"
+                >
+                  {{ provincia }}
+                </li>
+              </ul>
+            </td>
+            <td class="py-2">
+              <ul>
+                <li
+                  class="py-1"
+                  v-for="(direccion, idx) in entry.direccion"
+                  :key="idx"
+                >
+                  {{ direccion }}
+                </li>
+              </ul>
+            </td>
+            <td class="py-2">
+              <ul>
+                <li
+                  class="py-1"
+                  v-for="(tel, idx) in entry.telefonos"
+                  :key="idx"
+                >
+                  <span v-if="Array.isArray(tel)">{{ tel.join(", ") }}</span>
+                  <span v-else>{{ tel }}</span>
+                </li>
+              </ul>
+            </td>
+            <td class="py-2">
+              <ul>
+                <li
+                  class="py-1"
+                  v-for="(email, idx) in normalizeArray(entry.mail)"
+                  :key="idx"
+                >
+                  {{ email }}
+                </li>
+              </ul>
+            </td>
+            <td class="py-2 rounded-r-xl">
+              <a
+                class="text-blue-600 hover:underline"
+                :href="'https://' + entry.web"
+                target="_blank"
+              >
+                {{ entry.web }}
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-    <Leaflet class="z-10"></Leaflet>
   </div>
 </template>
-<script setup></script>
+
+<script setup>
+const rawData = [
+  {
+    concesionario: "Fábrica",
+    localidad: ["Alvear"],
+    provincia: ["Santa Fe"],
+    direccion: ["Ruta 16, km 4.5"],
+    telefonos: ["(0341)-317-7400", "(0341)-157-484539"],
+    mail: "ventas@randon.com.ar",
+    web: "www.randon.com.ar",
+  },
+  {
+    concesionario: "Abercar",
+    localidad: ["Trelew", "Cipolletti", "Comodoro Riv."],
+    provincia: ["Chubut", "Río Negro", "Chubut"],
+    direccion: [
+      "Ruta 3, km 1460",
+      "Ruta 22, km 1213",
+      "Hipólito Yrigoyen 4169",
+    ],
+    telefonos: [["(0280)-485-9760"], ["(0299)-421-3863"], ["(0297)-401-5116"]],
+    mail: ["ventas@abercar.com.ar"],
+    web: "www.abercar.com.ar/randon",
+  },
+  {
+    concesionario: "Avelli",
+    localidad: ["Posadas", "Paso de los Libres", "El Dorado"],
+    provincia: ["Misiones", "Corrientes", "Misiones"],
+    direccion: ["Ruta 12, km 5", "Ruta 117, km 9", "Ruta 12, km 1541"],
+    telefonos: ["(0376)-448-0901", "(03772)-424-178", "(03751)-422-790"],
+    mail: "informacion@avelliautomotores.com.ar",
+    web: "www.avelliautomotores.com.ar",
+  },
+  {
+    concesionario: "Central Acoplados",
+    localidad: ["Moreno"],
+    provincia: ["Buenos Aires"],
+    direccion: ["Colectora Norte, Acceso Oeste, km 30"],
+    telefonos: ["(011)-4170-5646", "(011)-3694-4474"],
+    mail: "info@centralacoplados.com.ar",
+    web: "www.centralacoplados.com.ar",
+  },
+  {
+    concesionario: "Centrocam",
+    localidad: ["Villa María"],
+    provincia: ["Córdoba"],
+    direccion: ["Colectora AU9 Cba-Rosario, km 562"],
+    telefonos: ["(0353)-154-143981"],
+    mail: ["info@centrocamsa.com.ar", "ventas1@centrocamsa.com.ar"],
+    web: "www.centrocamsa.com.ar",
+  },
+  {
+    concesionario: "Cuyosur",
+    localidad: ["Maipú"],
+    provincia: ["Mendoza"],
+    direccion: ["Rodríguez Peña 3300"],
+    telefonos: [
+      "(0261)-497-8483",
+      "(0261)-497-9029",
+      "(0261)-497-9136",
+      "(0261)-152-217447",
+    ],
+    mail: "info@cuyosur.com",
+    web: "www.cuyosur.com",
+  },
+  {
+    concesionario: "Rutasur",
+    localidad: ["Bahía Blanca", "Quequén", "Mar del Plata"],
+    provincia: ["Buenos Aires"],
+    direccion: [
+      "Ruta 3, km 696",
+      "Ruta 3, km 1460",
+      "Av. Presidente Perón 1271",
+    ],
+    telefonos: ["(02262)-154-14590", "(02262)-156-15392", "(0223)-155-927688"],
+    mail: [
+      "mschechtel@decker.com.ar",
+      "ymartinez@decker.com.ar",
+      "rmarinhes@decker.com.ar",
+    ],
+    web: "www.decker.com.ar",
+  },
+];
+
+// Transforma concesionarios con múltiples sucursales en varias filas
+const processedData = rawData.flatMap((entry) => {
+  const localidades = normalizeArray(entry.localidad);
+  const provincias = normalizeArray(entry.provincia);
+  const direcciones = normalizeArray(entry.direccion);
+  const telefonos = normalizeArray(entry.telefonos);
+
+  const max = Math.max(
+    localidades.length,
+    provincias.length,
+    direcciones.length,
+    telefonos.length
+  );
+  return Array.from({ length: max }).map((_, i) => ({
+    concesionario: entry.concesionario,
+    localidad: localidades[i] || "",
+    provincia: provincias[i] || "",
+    direccion: direcciones[i] || "",
+    telefonos: Array.isArray(telefonos[i]) ? telefonos[i] : [telefonos[i]],
+    mail: entry.mail,
+    web: entry.web,
+  }));
+});
+
+function normalizeArray(value) {
+  if (Array.isArray(value)) return value;
+  return [value];
+}
+</script>
