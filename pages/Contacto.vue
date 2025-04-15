@@ -45,19 +45,14 @@
           </div>
           <div class="flex flex-col">
             <svgo-contacto2 class="!h-16 !w-auto"></svgo-contacto2>
-            <span class="font-bold lg:mt-8 mt-4"
-              >Talleres oficiales y postventa
-            </span>
-            <span>postventa@randon.com.ar </span>
-            <span>+54 341 6008500</span>
+            <span class="font-bold lg:mt-8 mt-4">Repuestos </span>
+            <span> repuestos@randon.com.ar </span>
+            <span>+54 341 7484539</span>
           </div>
           <div class="flex flex-col">
             <svgo-contacto3 class="!h-16 !w-auto"></svgo-contacto3>
-            <span class="font-bold lg:mt-8 mt-4"
-              >Talleres oficiales y postventa
-            </span>
-            <span>postventa@randon.com.ar </span>
-            <span>+54 341 6008500</span>
+            <span class="font-bold lg:mt-8 mt-4">Bolsa de trabajo </span>
+            <span>personasycultura@randon.com.ar </span>
           </div>
         </div>
       </div>

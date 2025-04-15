@@ -106,9 +106,13 @@
       </div>
 
       <div class="flex flex-col lg:flex-row justify-center gap-4 lg:gap-12">
-        <VButton titulo="Descargar el catálogo"></VButton>
-        <VButton class="bg-white text-secondary" titulo="Descargar el manual">
-        </VButton>
+        <button v-if="tablaActual?.catalogo" @click="descargarCatalogos">
+          <VButton titulo="Descargar el catálogo"> </VButton>
+        </button>
+        <a href="/docs/ACOPLADO/Folleto_Acoplado.pdf" download>
+          <VButton class="bg-white text-secondary" titulo="Descargar el manual">
+          </VButton>
+        </a>
       </div>
     </div>
   </div>
@@ -129,6 +133,7 @@ const tablas = ref([
     nombre: "Acoplado",
     desc: "Una de las unidades más pedidas por el mercado argentino. Ideal para el transporte de cargas paletizadas, cargas secas, granos y general.",
     extra: "*Color carrocería a elección.",
+    catalogo: "ACOPLADO/Folleto_Acoplado",
     headers: ["Disp. de ejes", "Ejes", "Largo", "Tractor"],
     datos: [
       ["2+1", "3", "9.40 mts", "4x2"],
@@ -143,7 +148,12 @@ const tablas = ref([
     imagen: "semirremolque",
     nombre: "Semirremolque carga seca",
     desc: "Ideal para el transporte de cargas paletizadas, cargas secas y general. Ejes Suspensys, pata de apoyo Jost e instalación eléctrica de 24V LED.",
-    extra: "*Color carrocería a elección.",
+    catalogo: [
+      "SEMIRREMOLQUE/Folleto_SR_01",
+      "SEMIRREMOLQUE/Folleto_SR_02",
+      "SEMIRREMOLQUE/Folleto_SR_03",
+      "SEMIRREMOLQUE/Folleto_SR_04",
+    ],
     headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "13.50mts", "4x2", "45tn"],
@@ -163,6 +173,13 @@ const tablas = ref([
     nombre: "Batea",
     desc: "Ideal para el transporte de arena, granos, fertilizantes, ripio, minerales y otros productos a granel.",
     extra: "*Color de lona a elección.",
+    catalogo: [
+      "BATEA/Folleto_Batea_01",
+      "BATEA/Folleto_Batea_02",
+      "BATEA/Folleto_Batea_03",
+      "BATEA/Folleto_Batea_04",
+      "BATEA/Folleto_Batea_05",
+    ],
     headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "25m³", "4x2", "45tn"],
@@ -179,6 +196,11 @@ const tablas = ref([
     imagen: "sider",
     nombre: "Sider",
     desc: "Unidad destinada al transporte de cargas paletizadas. Ejes suspensys, pata de apoyo jost, piso antideslizante, easy lock y central lock.",
+    catalogo: [
+      "SIDER/Folleto_SIDER_01",
+      "SIDER/Folleto_SIDER_02",
+      "SIDER/Folleto_SIDER_03",
+    ],
     headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "14.60mts", "4x2", "45tn"],
@@ -192,6 +214,12 @@ const tablas = ref([
     imagen: "furgonfrig",
     nombre: "Furgón Frigorífico",
     desc: "Unidad destinada al transporte de cargas refrigeradas. Mayor aislamiento, menor consumo, más vida útil del producto. Alta tecnología en inyección de poliuretano.",
+    catalogo: [
+      "FRIGORIFICO/Folleto_Frigorifico_01",
+      "FURGON_FRIGORIFICO/Folleto_Frigorifico_02",
+      "FURGON_FRIGORIFICO/Folleto_Frigorifico_03",
+      "FURGON_FRIGORIFICO/Folleto_Frigorifico_04",
+    ],
     headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "14.70mts", "4x2", "45tn"],
@@ -204,6 +232,7 @@ const tablas = ref([
     imagen: "furgonpaq",
     nombre: "Furgón Paquetero",
     desc: "Unidad destinada al transporte de cargas paletizadas. Mayor capacidad de carga, más vida útil del producto. Alta tecnología en materiales.",
+    catalogo: "PAQUETERO/Folleto_Paquetero",
     headers: ["Disp. de ejes", "Largo", "Tractor", "PBTC"],
     datos: [
       ["2+1", "15.45mts", "4x2", "45tn"],
@@ -216,6 +245,7 @@ const tablas = ref([
     imagen: "tanque",
     nombre: "Tanque",
     desc: "Transporta diversas cargas con la mayor seguridad y calidad del mercado. Un tanque para cada necesidad.",
+    catalogo: "TANQUE/Folleto_Tanque",
     headers: ["Material", "Disp. de ejes", "Cisternas", "Capacidad"],
     datos: [
       ["Acero al carbón", "1+1", "1", "35m³"],
@@ -227,6 +257,7 @@ const tablas = ref([
     imagen: "silo",
     nombre: "Silo",
     desc: "Para el transporte de cemento, cal, cenizas, talco industrial, harina y otros materiales que utilizan sistema de descarga por presurización.",
+    catalogo: ["SILO/Folleto_Silo_01", "SILO/Folleto_Silo_03"],
     headers: ["Disp. de ejes", "Capacidad", "PBTC"],
     datos: [
       ["2+1", "30m³", "52.5tn"],
@@ -255,8 +286,27 @@ const tablas = ref([
   },
 ]);
 
-// Filtrar la tabla correspondiente al ID de la URL
 const tablaActual = computed(() =>
   tablas.value.find((tabla) => tabla.id === id)
 );
+
+const descargarCatalogos = () => {
+  if (tablaActual.value?.catalogo) {
+    const catalogos = Array.isArray(tablaActual.value.catalogo)
+      ? tablaActual.value.catalogo
+      : [tablaActual.value.catalogo];
+
+    catalogos.forEach((catalogo) => {
+      const nombreArchivo = `${catalogo}.pdf`;
+      const rutaCompleta = `/docs/${catalogo}.pdf`;
+      const link = document.createElement("a");
+      link.href = rutaCompleta;
+      link.download = nombreArchivo.split("/").pop(); // Tomamos la última parte como nombre
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link); // Limpia el enlace temporal
+    });
+  }
+};
+// Filtrar la tabla correspondiente al ID de la URL
 </script>

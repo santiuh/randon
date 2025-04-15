@@ -25,11 +25,16 @@
         class="bg-white grid grid-flow-row grid-cols-1 lg:grid-cols-3 rounded-[38px] px-4 lg:px-16 gap-x-5 gap-y-6 py-20 drop-shadow-2xl"
       >
         <div
-          v-for="(post, i) in posts"
-          :key="post.id"
+          v-for="(post, i) in posts.length ? posts : Array(6).fill({})"
+          :key="post.id || i"
           class="aspect-square w-full bg-gray-100 rounded-2xl overflow-hidden"
         >
-          <a :href="post.permalink" target="_blank" class="w-full h-full block">
+          <a
+            v-if="posts.length"
+            :href="post.permalink"
+            target="_blank"
+            class="w-full h-full block"
+          >
             <img
               v-if="
                 post.media_type === 'IMAGE' ||
@@ -48,6 +53,10 @@
               loop
             ></video>
           </a>
+          <div
+            v-else
+            class="w-full h-full bg-gray-300 animate-pulse rounded-2xl"
+          ></div>
         </div>
       </div>
     </div>
