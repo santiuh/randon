@@ -109,10 +109,12 @@
         <button v-if="tablaActual?.catalogo" @click="descargarCatalogos">
           <VButton titulo="Descargar el catálogo"> </VButton>
         </button>
-        <a href="/docs/ACOPLADO/Folleto_Acoplado.pdf" download>
-          <VButton class="bg-white text-secondary" titulo="Descargar el manual">
-          </VButton>
-        </a>
+        <VButton
+          class="!bg-white text-secondary"
+          @click="router.push('/Manuales')"
+          titulo="Descargar el manual"
+        >
+        </VButton>
       </div>
     </div>
   </div>
@@ -122,6 +124,7 @@
 import { useRoute } from "vue-router";
 import { ref, computed } from "vue";
 
+const router = useRouter();
 const route = useRoute();
 const id = route.params.id;
 
