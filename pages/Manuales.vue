@@ -97,11 +97,11 @@
 <script setup>
 const rawData = [
   {
-    concesionario: "Manual Semirremolque",
+    concesionario: "Semirremolque",
     localidad: ["Manuales/Manual_Semirremolque"],
   },
   {
-    concesionario: "Manual Silo",
+    concesionario: "Silo",
     localidad: ["Manuales/Manual_Semirremolque"],
   },
   {
