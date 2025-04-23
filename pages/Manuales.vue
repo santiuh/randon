@@ -1,7 +1,14 @@
 <template>
   <div
-    class="w-full bg-gray flex justify-center !text-primary py-24 lg:py-8 px-4"
+    class="w-full bg-gray flex flex-col justify-center items-center gap-7 !text-primary py-24 lg:py-12 px-4"
   >
+    <h1
+      class="text-4xl text-secondary font-medium tracking-widest leading-6"
+      data-aos="fade-up"
+      data-aos-once="true"
+    >
+      Manuales
+    </h1>
     <div
       class="shadow rounded-xl bg-[#e0e1e2] px-4 pt-4 pb-8 lg:pt-4 lg:pb-4 flex flex-col w-full lg:max-w-[1440px]"
     >
@@ -11,8 +18,8 @@
         >
           <thead class="bg-gray-100 text-secondary text-gray-700">
             <tr>
-              <th class="py-2 pl-2 min-w-[120px]">Concesionario</th>
-              <th class="py-2 min-w-[100px]">Localidad</th>
+              <th class="py-2 pl-2 min-w-[120px]">Manual</th>
+              <th class="py-2 min-w-[100px]">Archivo</th>
             </tr>
           </thead>
           <tbody>
@@ -23,11 +30,16 @@
               <td class="py-2">
                 <ul class="leading-tight">
                   <li
-                    class="text-nowrap"
                     v-for="(localidad, idx) in entry.localidad"
                     :key="idx"
+                    class="text-nowrap"
                   >
-                    {{ localidad }}
+                    <button
+                      @click="descargarCatalogos(localidad)"
+                      class="text-blue-600 hover:underline"
+                    >
+                      Descargar manual.
+                    </button>
                   </li>
                 </ul>
               </td>
@@ -85,32 +97,36 @@
 <script setup>
 const rawData = [
   {
-    concesionario: "Fábrica",
-    localidad: ["Alvear"],
+    concesionario: "Manual Semirremolque",
+    localidad: ["Manuales/Manual_Semirremolque"],
   },
   {
-    concesionario: "Abercar",
-    localidad: ["Trelew", "Cipolletti", "Comodoro Riv."],
+    concesionario: "Manual Silo",
+    localidad: ["Manuales/Manual_Semirremolque"],
   },
   {
-    concesionario: "Avelli",
-    localidad: ["Posadas", "Paso de los Libres", "El Dorado"],
+    concesionario: "Carreton",
+    localidad: ["Manuales/Manual_Semirremolque"],
   },
   {
-    concesionario: "Central Acoplados",
-    localidad: ["Moreno"],
+    concesionario: "Frigorífico",
+    localidad: ["Manuales/Manual_Semirremolque"],
   },
   {
-    concesionario: "Centrocam",
-    localidad: ["Villa María"],
+    concesionario: "Sider",
+    localidad: ["Manuales/Manual_Semirremolque"],
   },
   {
-    concesionario: "Cuyosur",
-    localidad: ["Maipú"],
+    concesionario: "Paquetero",
+    localidad: ["Manuales/Manual_Semirremolque"],
   },
   {
-    concesionario: "Rutasur",
-    localidad: ["Bahía Blanca", "Quequén", "Mar del Plata"],
+    concesionario: "Tanque",
+    localidad: ["Manuales/Manual_Semirremolque"],
+  },
+  {
+    concesionario: "Batea",
+    localidad: ["Manuales/Manual_Semirremolque"],
   },
 ];
 
@@ -137,6 +153,17 @@ const processedData = rawData.flatMap((entry) => {
     web: entry.web,
   }));
 });
+
+const descargarCatalogos = (catalogo) => {
+  const nombreArchivo = `${catalogo}.pdf`;
+  const rutaCompleta = `/docs/${catalogo}.pdf`;
+  const link = document.createElement("a");
+  link.href = rutaCompleta;
+  link.download = nombreArchivo.split("/").pop(); // Tomamos la última parte como nombre
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link); // Limpia el enlace temporal
+};
 
 function normalizeArray(value) {
   if (Array.isArray(value)) return value;
