@@ -95,6 +95,22 @@
 </template>
 
 <script setup>
+useHead({
+  title: "Manuales | Randon Argentina",
+  meta: [
+    {
+      name: "description",
+      content: "Descargá manuales y documentación técnica de productos Randon.",
+    },
+    { property: "og:title", content: "Manuales | Randon Argentina" },
+    {
+      property: "og:description",
+      content: "Descargá manuales y documentación técnica de productos Randon.",
+    },
+    { property: "og:type", content: "website" },
+  ],
+});
+
 const rawData = [
   {
     concesionario: "Semirremolque",

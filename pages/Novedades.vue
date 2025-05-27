@@ -64,6 +64,24 @@
 </template>
 
 <script setup>
+useHead({
+  title: "Novedades | Randon Argentina",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Enterate de las últimas novedades, lanzamientos y noticias de Randon Argentina.",
+    },
+    { property: "og:title", content: "Novedades | Randon Argentina" },
+    {
+      property: "og:description",
+      content:
+        "Enterate de las últimas novedades, lanzamientos y noticias de Randon Argentina.",
+    },
+    { property: "og:type", content: "website" },
+  ],
+});
+
 const config = useRuntimeConfig();
 const IG_TOKEN = config.public.IG_TOKEN;
 const IG_ID = config.public.IG_ID;

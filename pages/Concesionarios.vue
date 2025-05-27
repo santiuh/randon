@@ -88,6 +88,24 @@
 </template>
 
 <script setup>
+useHead({
+  title: "Concesionarios | Randon Argentina",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Encontrá concesionarios oficiales de Randon en todo el país. Atención y servicio especializado.",
+    },
+    { property: "og:title", content: "Concesionarios | Randon Argentina" },
+    {
+      property: "og:description",
+      content:
+        "Encontrá concesionarios oficiales de Randon en todo el país. Atención y servicio especializado.",
+    },
+    { property: "og:type", content: "website" },
+  ],
+});
+
 const rawData = [
   {
     concesionario: "Fábrica",

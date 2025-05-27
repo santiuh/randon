@@ -40,6 +40,24 @@
   </div>
 </template>
 <script setup>
+useHead({
+  title: "Productos | Randon Argentina",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Descubrí nuestra línea de acoplados, semirremolques y soluciones para el transporte.",
+    },
+    { property: "og:title", content: "Productos | Randon Argentina" },
+    {
+      property: "og:description",
+      content:
+        "Descubrí nuestra línea de acoplados, semirremolques y soluciones para el transporte.",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:image", content: "/img/productosbg.png" },
+  ],
+});
 const router = useRouter();
 const data = [
   { img: "acoplado.png", texto: "Acoplado" },

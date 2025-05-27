@@ -129,4 +129,23 @@
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+useHead({
+  title: "Contacto | Randon Argentina",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Contactate con Randon Argentina para consultas, soporte y más información sobre nuestros productos.",
+    },
+    { property: "og:title", content: "Contacto | Randon Argentina" },
+    {
+      property: "og:description",
+      content:
+        "Contactate con Randon Argentina para consultas, soporte y más información sobre nuestros productos.",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:image", content: "/img/contacto.png" },
+  ],
+});
+</script>

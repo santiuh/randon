@@ -190,4 +190,23 @@
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+useHead({
+  title: "Sobre Nosotros | Randon Argentina",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Conocé la historia, valores y presencia de Randon Argentina, líderes en acoplados y semirremolques.",
+    },
+    { property: "og:title", content: "Sobre Nosotros | Randon Argentina" },
+    {
+      property: "og:description",
+      content:
+        "Conocé la historia, valores y presencia de Randon Argentina, líderes en acoplados y semirremolques.",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:image", content: "/img/empresabg.png" },
+  ],
+});
+</script>
