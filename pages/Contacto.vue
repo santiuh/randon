@@ -89,47 +89,93 @@
             <p class="font-bold">¿QUERÉS SABER MÁS?</p>
             <P>DEJANOS TUS DATOS:</P>
           </div>
-          <form class="flex flex-col gap-3" action="">
+          <form class="flex flex-col gap-3" @submit.prevent="enviarFormulario">
             <input
+              v-model="nombre"
               class="bg-primary text-white border-white border rounded-md text-lg px-3 py-2"
               placeholder="Nombre y Apellido"
               type="text"
+              required
             />
             <div class="flex w-full flex-col lg:flex-row gap-3">
               <input
+                v-model="email"
                 class="bg-primary text-white border-white border rounded-md text-lg px-3 py-2 w-full"
                 placeholder="Correo electrónico"
-                type="text"
+                type="email"
+                required
               />
               <input
+                v-model="telefono"
                 class="bg-primary text-white border-white border rounded-md text-lg px-3 py-2 w-full"
                 placeholder="Teléfono"
                 type="tel"
               />
             </div>
             <input
+              v-model="localidad"
               class="bg-primary text-white border-white border rounded-md text-lg px-3 py-2"
               placeholder="Localidad"
               type="text"
             />
             <textarea
+              v-model="mensaje"
               class="bg-primary text-white border-white border rounded-md text-lg px-3 py-2"
               placeholder="Mensaje"
               name=""
               id=""
+              required
             ></textarea>
+            <VButton
+              class="!bg-white !text-secondary self-end"
+              titulo="Enviar"
+              @click="enviarFormulario"
+            ></VButton>
+            <div v-if="enviado" class="text-green-600 font-bold mt-2">
+              ¡Mensaje enviado correctamente!
+            </div>
+            <div v-if="errorEnvio" class="text-red-600 font-bold mt-2">
+              Error al enviar el mensaje. Intenta nuevamente.
+            </div>
           </form>
-
-          <VButton
-            class="!bg-white !text-secondary self-end"
-            titulo="Enviar"
-          ></VButton>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
+import { ref } from "vue";
+const nombre = ref("");
+const email = ref("");
+const telefono = ref("");
+const localidad = ref("");
+const mensaje = ref("");
+const enviado = ref(false);
+const errorEnvio = ref(false);
+
+async function enviarFormulario() {
+  try {
+    await $fetch("/api/mail", {
+      method: "POST",
+      body: {
+        subject: `Nuevo contacto de ${nombre.value}`,
+        text: `Nombre: ${nombre.value}\nEmail: ${email.value}\nTeléfono: ${telefono.value}\nLocalidad: ${localidad.value}\nMensaje: ${mensaje.value}`,
+        html: `<b>Nombre:</b> ${nombre.value}<br><b>Email:</b> ${email.value}<br><b>Teléfono:</b> ${telefono.value}<br><b>Localidad:</b> ${localidad.value}<br><b>Mensaje:</b> ${mensaje.value}`,
+      },
+    });
+    enviado.value = true;
+    errorEnvio.value = false;
+    nombre.value = "";
+    email.value = "";
+    telefono.value = "";
+    localidad.value = "";
+    mensaje.value = "";
+  } catch (e) {
+    errorEnvio.value = true;
+    enviado.value = false;
+  }
+}
+
 useHead({
   title: "Contacto | Randon Argentina",
   meta: [
